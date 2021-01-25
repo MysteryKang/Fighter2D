@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{354FDA02-5333-F3D3-92E1-E5C7CD5709D3}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player.cs" Line="70" Column="10" />
+      <File FileName="Assets/Scripts/CharacterController2D.cs" />
+      <File FileName="Assets/Scripts/Hadoken.cs" />
+      <File FileName="Assets/Scripts/Player2.cs" />
+      <File FileName="Assets/Scripts/HealthSystem.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FighterGame2D" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="492cfaae-2307-4e82-9dc2-c1d6a4bd1b28" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
