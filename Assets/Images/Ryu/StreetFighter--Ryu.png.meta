@@ -1301,7 +1301,7 @@ TextureImporter:
       name: StreetFighter--Ryu_3
       rect:
         serializedVersion: 2
-        x: 329
+        x: 327
         y: 4592
         width: 62
         height: 113
@@ -5169,8 +5169,8 @@ TextureImporter:
         y: 2449
         width: 78
         height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42900282, y: 0.592169}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5190,8 +5190,8 @@ TextureImporter:
         y: 2451
         width: 81
         height: 99
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49023286, y: 0.595893}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5211,8 +5211,8 @@ TextureImporter:
         y: 2453
         width: 85
         height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5093075, y: 0.5832751}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5232,8 +5232,8 @@ TextureImporter:
         y: 2453
         width: 87
         height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5207842, y: 0.6263756}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5253,8 +5253,8 @@ TextureImporter:
         y: 2454
         width: 83
         height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5277379, y: 0.61021394}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5274,8 +5274,8 @@ TextureImporter:
         y: 2454
         width: 101
         height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52279454, y: 0.5979679}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5295,8 +5295,8 @@ TextureImporter:
         y: 2451
         width: 102
         height: 92
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58758545}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5316,8 +5316,8 @@ TextureImporter:
         y: 2451
         width: 101
         height: 92
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51139724, y: 0.57507324}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8000,12 +8000,12 @@ TextureImporter:
       name: StreetFighter--Ryu_322
       rect:
         serializedVersion: 2
-        x: 195
-        y: 561
-        width: 60
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 198
+        y: 562
+        width: 56
+        height: 106
+      alignment: 9
+      pivot: {x: 0.3963743, y: 0.5786968}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8021,12 +8021,12 @@ TextureImporter:
       name: StreetFighter--Ryu_323
       rect:
         serializedVersion: 2
-        x: 266
-        y: 561
-        width: 69
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 267
+        y: 562
+        width: 67
+        height: 106
+      alignment: 9
+      pivot: {x: 0.402561, y: 0.57185394}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8042,12 +8042,12 @@ TextureImporter:
       name: StreetFighter--Ryu_324
       rect:
         serializedVersion: 2
-        x: 342
-        y: 561
-        width: 81
-        height: 106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 346
+        y: 562
+        width: 74
+        height: 104
+      alignment: 9
+      pivot: {x: 0.4264819, y: 0.5558002}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8064,11 +8064,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 421
-        y: 557
+        y: 560
         width: 89
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 100
+      alignment: 9
+      pivot: {x: 0.4714736, y: 0.54352415}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
