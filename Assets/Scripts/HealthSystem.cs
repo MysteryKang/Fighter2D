@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
-    public float health = 100f;
-    const float maxHealth = 100f;
+    public float health = 1000f;
+    const float maxHealth = 1000f;
     public Slider healthBar;
     public Animator animator;
 
@@ -26,7 +24,7 @@ public class HealthSystem : MonoBehaviour
         if (health > 0) {
             // play taking hits animation
             animator.SetTrigger("TakeHit");
-            healthBar.value = health / 100;
+            healthBar.value = health / maxHealth;
             if (health <= 30) {
                 healthBar.fillRect.GetComponent<Image>().color = Color.red;
             }

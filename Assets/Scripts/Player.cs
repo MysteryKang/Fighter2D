@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     public float speed;
 
-    const float maxHealth = 100;
+    const float maxHealth = 1000f;
     [SerializeField] private float health;
     public Slider HealthBar;
 
@@ -35,6 +35,10 @@ public class Player : MonoBehaviour
     float nextAttackTime = 0f;
 
     public float damage = 10f;
+
+    [SerializeField] private Vector2 upperCutForce;
+
+    bool isUpperCutting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -70,14 +74,17 @@ public class Player : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
 
-
       
         if (Input.GetKeyDown(KeyCode.J) && controller.m_Grounded) {
-            Attack();
+            LightPunch();
+        }
+        if (Input.GetKeyDown(KeyCode.K) && controller.m_Grounded)
+        {
+            Kick();
         }
 
         if (Time.time >= nextAttackTime) {
-            if (Input.GetKeyDown(KeyCode.K) && controller.m_Grounded)
+            if (Input.GetKeyDown(KeyCode.I) && controller.m_Grounded)
             {
                 Hadoken();
                 nextAttackTime = Time.time + 1f / hadokenRate;
@@ -85,13 +92,29 @@ public class Player : MonoBehaviour
         }
 
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("LightPunch") || animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("LightPunch") || animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken")
+            || animator.GetCurrentAnimatorStateInfo(0).IsName("Kick"))
         {
             horizontal = 0f;
             attacking = true;
         }
         else {
             attacking = false;
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")) {
+            if (isUpperCutting == true)
+            {
+                horizontal = 0f;
+            }
+            else
+            {
+                horizontal *= 0.3f;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.U)) {
+            UpperCut();
         }
 
         animator.SetBool("isGrounded", controller.m_Grounded);
@@ -106,26 +129,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void TakeHits(float damage) {
-        health -= damage;
-        if (health <= 0)
-        {
-            // player dies
-            // play death anination;
-            this.enabled = false;
-        }
-        else {
-            HealthBar.value = health / maxHealth;
-            if (health <= 30)
-            {
-                HealthBar.fillRect.GetComponent<Image>().color = Color.red;
-            }
-            animator.SetTrigger("TakeHit");
-        }
-
-    }
-
-    // hakoden animations
+    //  ---------- hakoden animations
     private void Hadoken() {
         attacking = true;
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken"))
@@ -137,15 +141,60 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Attack() {
+    #region
+
+    //  ----------- light punch
+    private void LightPunch() {  
         attacking = true;
-        animator.ResetTrigger("LightPunch");
+       // animator.ResetTrigger("LightPunch");
         animator.SetTrigger("LightPunch");
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits) {
             enemy.GetComponent<HealthSystem>().TakeHits(damage);
+            enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
         }
     }
+    private void Kick() {
+        attacking = true;
+        animator.SetTrigger("Kick");
+        Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in enemyhits)
+        {
+            enemy.GetComponent<HealthSystem>().TakeHits(damage);
+            enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+        }
+    }
+
+    private void UpperCut() {
+        animator.SetTrigger("UpperCut");
+    }
+
+    // ------- trigger at animation event
+    public void UpperCutJump() {
+        isUpperCutting = false;
+        Vector2 force = upperCutForce;
+        if (controller.m_FacingRight)
+        {
+            force.x *= 1f;
+        }
+        else {
+            force.x *= -1f;
+        }
+        jump = true;
+        horizontal *= 0.3f;
+    }
+
+    public void HitEnemy()
+    {
+        Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in enemyhits)
+        {
+            enemy.GetComponent<HealthSystem>().TakeHits(damage);
+            enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+        }
+    }
+
+    #endregion
 
     //private IEnumerator AttackEnemy() {
     //    animator.SetTrigger("Attack");

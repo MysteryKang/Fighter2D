@@ -1124,6 +1124,9 @@ TextureImporter:
   - first:
       213: -5270336599871384024
     second: StreetFighter--Ryu_373
+  - first:
+      213: 496640921391381574
+    second: StreetFighter--Ryu_374
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2981,12 +2984,12 @@ TextureImporter:
       name: StreetFighter--Ryu_83
       rect:
         serializedVersion: 2
-        x: 13
-        y: 3767
-        width: 62
-        height: 106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 16
+        y: 3768
+        width: 56
+        height: 104
+      alignment: 9
+      pivot: {x: 0.5103293, y: 0.50873274}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3005,9 +3008,9 @@ TextureImporter:
         x: 91
         y: 3767
         width: 53
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 99
+      alignment: 9
+      pivot: {x: 0.48792094, y: 0.53520805}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3023,12 +3026,12 @@ TextureImporter:
       name: StreetFighter--Ryu_85
       rect:
         serializedVersion: 2
-        x: 161
-        y: 3767
-        width: 93
-        height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 163
+        y: 3770
+        width: 89
+        height: 100
+      alignment: 9
+      pivot: {x: 0.2961894, y: 0.5434033}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3045,11 +3048,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 266
-        y: 3767
-        width: 92
-        height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 3768
+        width: 90
+        height: 100
+      alignment: 9
+      pivot: {x: 0.2952813, y: 0.5458057}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4367,10 +4370,10 @@ TextureImporter:
       name: StreetFighter--Ryu_149
       rect:
         serializedVersion: 2
-        x: 886
-        y: 3101
-        width: 150
-        height: 85
+        x: 888
+        y: 3102
+        width: 74
+        height: 79
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5442,8 +5445,8 @@ TextureImporter:
         y: 2248
         width: 65
         height: 83
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5582354, y: 0.7166292}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5463,8 +5466,8 @@ TextureImporter:
         y: 2246
         width: 60
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.563088, y: 0.76148427}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5484,8 +5487,8 @@ TextureImporter:
         y: 2246
         width: 66
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52867633, y: 0.77206725}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5501,12 +5504,12 @@ TextureImporter:
       name: StreetFighter--Ryu_203
       rect:
         serializedVersion: 2
-        x: 292
+        x: 291
         y: 2244
         width: 69
         height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4725709, y: 0.66107565}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9063,6 +9066,27 @@ TextureImporter:
       bones: []
       spriteID: c892f19503a880ec0800000000000000
       internalID: -3600475961824433780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetFighter--Ryu_374
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 3104
+        width: 68
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cb474694c64e600800000000000000
+      internalID: 496640921391381574
       vertices: []
       indices: 
       edges: []
