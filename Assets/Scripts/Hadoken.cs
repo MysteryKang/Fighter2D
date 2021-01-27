@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Hadoken : MonoBehaviour
 {
-    public float direction = 1;
-    private float speed = 5f;
+    public float direction = 1f;
+    private float speed = 10f;
     Vector2 scale;
-    [SerializeField] private float hadokenDamage = 10f;
+    [SerializeField] private float hadokenDamage = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         scale = transform.localScale;
-        transform.localScale = new Vector3(scale.x * direction, scale.y);
+        transform.localScale = new Vector3(Mathf.Abs(scale.x) * direction * 2f, scale.y * 2f);
     }
 
 
@@ -21,7 +21,9 @@ public class Hadoken : MonoBehaviour
     {
         if (collision.gameObject.layer == 10) {
             collision.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
-            collision.gameObject.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+            Transform enemy = collision.gameObject.transform;
+            enemy.localScale = new Vector3(Mathf.Abs(enemy.localScale.x) * -direction, enemy.localScale.y, 1f);
+            Player.canSpawnHadoken = true;
             Destroy(this.gameObject);
         }
     }
@@ -34,6 +36,7 @@ public class Hadoken : MonoBehaviour
         transform.position = position;
 
         if (Mathf.Abs(transform.position.x) > 20f) {
+            Player.canSpawnHadoken = true;
             Destroy(this.gameObject);
         }
     }

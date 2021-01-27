@@ -23,22 +23,24 @@ public class Player : MonoBehaviour
     [SerializeField] private float health;
     public Slider HealthBar;
 
-    float horizontal;
+    [SerializeField] private float horizontal;
     bool jump = false;
-    bool attacking = false;
+    public bool attacking = false;
 
     public GameObject hadokenObject;
 
-    //public float attackRate = 100f;
-    //float nextAttacttime = 0f;
     public float hadokenRate = 0.3f;
     float nextAttackTime = 0f;
 
-    public float damage = 10f;
+    public float damage = 1f;
 
     [SerializeField] private Vector2 upperCutForce;
 
     bool isUpperCutting = false;
+
+    public static bool canSpawnHadoken = true;
+
+    public float spinningKickHorizontalSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -47,31 +49,60 @@ public class Player : MonoBehaviour
         health = maxHealth;
     }
 
+    // --- spawning hadoken here and assign <Hadoken> class to the gameobject
     public void SpawnHadoken() {
-        GameObject hdk = Instantiate(hadokenObject);
-        hdk.GetComponent<Hadoken>().direction = transform.localScale.x;
+        GameObject hdk = new GameObject();
         hdk.transform.position = attackPoint.position;
-        hdk.SetActive(true);
+        hdk.AddComponent<SpriteRenderer>();
+        hdk.GetComponent<SpriteRenderer>().sprite = Resources.Load("Hadoken", typeof(Sprite)) as Sprite;
+        hdk.AddComponent<PolygonCollider2D>();
+        hdk.GetComponent<PolygonCollider2D>().isTrigger = true;
+        hdk.AddComponent<Hadoken>();
+        hdk.GetComponent<Hadoken>().direction = transform.localScale.x / Mathf.Abs(transform.localScale.x);
+        hdk.gameObject.name = "hadoken";
+        canSpawnHadoken = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal") * speed;
+        if (!attacking)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal") * speed;
+        }
+        else {
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !jump && !attacking)
         {
-           // animator.SetTrigger("Jump");
             jump = true;
         }
  
         animator.SetBool("isGrounded", controller.m_Grounded);
+
+        //------- determine whether it is moving horizontally or not
         if (Mathf.Abs(horizontal) > 0) 
         {
             animator.SetBool("isMoving", true);
         }
         else {
             animator.SetBool("isMoving", false);
+        }
+        // ---------
+
+
+        // ------ airborne punch or airborne kick
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle_Jump_Up") ||
+            animator.GetCurrentAnimatorStateInfo(0).IsName("Idle_Jump_Down")||
+            animator.GetCurrentAnimatorStateInfo(0).IsName("Rolling_Jump")) {
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                AirBornePunch();
+            }
+            else if (Input.GetKeyDown(KeyCode.K)) {
+                AirborneKick();
+            }
         }
 
       
@@ -83,15 +114,15 @@ public class Player : MonoBehaviour
             Kick();
         }
 
-        if (Time.time >= nextAttackTime) {
+        if (canSpawnHadoken) {
             if (Input.GetKeyDown(KeyCode.I) && controller.m_Grounded)
             {
                 Hadoken();
-                nextAttackTime = Time.time + 1f / hadokenRate;
+             //   nextAttackTime = Time.time + 1f / hadokenRate;
             }
         }
 
-
+        // if any of {LightPunch, Hadoken, Kick}'s  animation is Playing stop moving horizontally
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("LightPunch") || animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken")
             || animator.GetCurrentAnimatorStateInfo(0).IsName("Kick"))
         {
@@ -102,6 +133,11 @@ public class Player : MonoBehaviour
             attacking = false;
         }
 
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu") || animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu_Running")) {
+            attacking = false;
+        }
+
+        // UpperCutting
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")) {
             if (isUpperCutting == true)
             {
@@ -113,8 +149,13 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.U)) {
+        if (Input.GetKeyDown(KeyCode.U) && !animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")) {
             UpperCut();
+        }
+
+        if (Input.GetKeyDown(KeyCode.H) && !animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") && controller.m_Grounded)
+        {
+            SpinningKick();
         }
 
         animator.SetBool("isGrounded", controller.m_Grounded);
@@ -122,13 +163,18 @@ public class Player : MonoBehaviour
         animator.SetFloat("xVelocity", GetComponent<Rigidbody2D>().velocity.x);
     }
 
+    private void PushBackward(Rigidbody2D rd) {
+        float direction = controller.m_FacingRight == true ? 1f : -1f;  
+        rd.AddForce(new Vector2(10f * direction, 0f));
+    }
+
     private void FixedUpdate()
     {
         controller.Move(horizontal, false, jump);
         jump = false;
-
     }
 
+    #region Hadoken 
     //  ---------- hakoden animations
     private void Hadoken() {
         attacking = true;
@@ -141,19 +187,24 @@ public class Player : MonoBehaviour
         }
     }
 
-    #region
+    #endregion
+
+    #region  Light Punch
 
     //  ----------- light punch
     private void LightPunch() {  
         attacking = true;
-       // animator.ResetTrigger("LightPunch");
         animator.SetTrigger("LightPunch");
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits) {
             enemy.GetComponent<HealthSystem>().TakeHits(damage);
+            PushBackward(enemy.GetComponent<Rigidbody2D>());
             enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
         }
     }
+    #endregion
+
+    #region LightKick
     private void Kick() {
         attacking = true;
         animator.SetTrigger("Kick");
@@ -161,17 +212,25 @@ public class Player : MonoBehaviour
         foreach (Collider2D enemy in enemyhits)
         {
             enemy.GetComponent<HealthSystem>().TakeHits(damage);
+            PushBackward(enemy.GetComponent<Rigidbody2D>());
             enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
         }
     }
+    #endregion
+
+
+    #region   UpperCut
 
     private void UpperCut() {
+        attacking = true;
+        horizontal = controller.m_FacingRight ? 0.5f : -0.5f;
         animator.SetTrigger("UpperCut");
     }
 
     // ------- trigger at animation event
     public void UpperCutJump() {
         isUpperCutting = false;
+        controller.m_AirControl = false;
         Vector2 force = upperCutForce;
         if (controller.m_FacingRight)
         {
@@ -183,28 +242,100 @@ public class Player : MonoBehaviour
         jump = true;
         horizontal *= 0.3f;
     }
+    #endregion
 
-    public void HitEnemy()
+    #region Spinning Kick
+    public void SpinningKick() {
+        attacking = true;
+        animator.SetTrigger("SpinningKick");
+        GetComponent<Rigidbody2D>().gravityScale = 0f;
+        transform.position += new Vector3(0f, 0.6f);
+        StartCoroutine(SpinningKickMovement());
+    }
+
+    IEnumerator SpinningKickMovement() {
+        float direction = transform.localScale.x / Mathf.Abs(transform.localScale.x);
+        spinningKickHorizontalSpeed *= direction;
+        horizontal = 1f * direction * 0.5f;
+        Debug.Log(horizontal);
+        yield return new WaitForSeconds(1f);
+        horizontal = 0f;
+        attacking = false;
+        Debug.Log(horizontal);
+        GetComponent<Rigidbody2D>().gravityScale = 5f;
+    }
+
+    public void ResetGravity()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = 5f;
+    }
+    #endregion
+
+
+    public void HeavyAttack()
     {
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits)
         {
-            enemy.GetComponent<HealthSystem>().TakeHits(damage);
-            enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+            if (enemy.GetComponent<HealthSystem>().isInvincible)
+                return;
+            else {
+                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                enemy.GetComponent<Animator>().SetTrigger("TakenDown");
+                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                float direction = controller.m_FacingRight == true ? 1f : -1f;
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction, upperCutForce.y));
+            }
         }
     }
 
-    #endregion
+    private void AirBornePunch() {
+        attacking = true;
+        LightAttack();
+        animator.SetTrigger("AirbornePunch");
+    }
+    private void AirborneKick() {
+        attacking = true;
+        LightAttack();
+        animator.SetTrigger("AirborneKick");
+    }
 
-    //private IEnumerator AttackEnemy() {
-    //    animator.SetTrigger("Attack");
-    //    yield return new WaitForSeconds(0.8235294f);
-    //    attacking = false;
-    //}
+    public void LightAttack()
+    {
+        Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in enemyhits)
+        {
+            if (enemy.GetComponent<HealthSystem>().isInvincible)
+                return;
+            else
+            {
+                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                float direction = controller.m_FacingRight == true ? 1f : -1f;
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction, upperCutForce.y));
+            }
+        }
+    }
 
+    // draw gismos of attackpoint and groundcheck in the  scene
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         Gizmos.DrawWireSphere(groundCheck.position, radius);
     }
 }
+
+//// player's different status  TO be used later !!
+//public enum PlayerState {
+    
+//    LightPunch,
+//    LightKick,
+//    AirbornePunch,
+//    AirborneKick,
+//    SpinningKick,
+//    UpperCut
+
+//}
+//// 

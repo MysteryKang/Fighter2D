@@ -1,22 +1,21 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HealthSystem.cs">
+﻿<Properties StartupConfiguration="{354FDA02-5333-F3D3-92E1-E5C7CD5709D3}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TestingAction.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="129" Column="10" />
-      <File FileName="Assets/Scripts/CharacterController2D.cs" />
-      <File FileName="Assets/Scripts/Hadoken.cs" Line="26" Column="6" />
-      <File FileName="Assets/Scripts/Player2.cs" />
-      <File FileName="Assets/Scripts/HealthSystem.cs" Line="11" Column="30" />
+      <File FileName="Assets/Scripts/Player.cs" Line="96" Column="32" />
+      <File FileName="Assets/Scripts/CharacterController2D.cs" Line="9" Column="25" />
+      <File FileName="Assets/Scripts/Hadoken.cs" Line="7" Column="27" />
+      <File FileName="Assets/Scripts/Player2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HealthSystem.cs" Line="56" Column="6" />
+      <File FileName="Assets/GameManger.cs" Line="20" Column="2" />
+      <File FileName="Assets/TestingAction.cs" Line="7" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FighterGame2D" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="HealthSystem.cs" selected="True" />
-                </Node>
-              </Node>
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True" />
+              <Node name="TestingAction.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -83,4 +83,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: ResetAirControl
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 756167c3896a947789172250b0b791e7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

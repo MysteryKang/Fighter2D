@@ -1127,6 +1127,9 @@ TextureImporter:
   - first:
       213: 496640921391381574
     second: StreetFighter--Ryu_374
+  - first:
+      213: 4345220909910375056
+    second: StreetFighter--Ryu_375
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2393,27 +2396,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetFighter--Ryu_55
-      rect:
-        serializedVersion: 2
-        x: 875
-        y: 4161
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 838768129febfe780800000000000000
-      internalID: -8651486381936838600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: StreetFighter--Ryu_56
       rect:
         serializedVersion: 2
@@ -2652,8 +2634,8 @@ TextureImporter:
         y: 4044
         width: 101
         height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.37842885, y: 0.54727626}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2673,8 +2655,8 @@ TextureImporter:
         y: 4041
         width: 99
         height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.37597287, y: 0.5590304}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2694,8 +2676,8 @@ TextureImporter:
         y: 4041
         width: 99
         height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.36908266, y: 0.5535003}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3639,8 +3621,8 @@ TextureImporter:
         y: 3474
         width: 64
         height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.62912595, y: 0.56089896}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3660,8 +3642,8 @@ TextureImporter:
         y: 3472
         width: 62
         height: 99
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52665734, y: 0.5751337}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3681,8 +3663,8 @@ TextureImporter:
         y: 3470
         width: 99
         height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42069775, y: 0.5676203}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3702,8 +3684,8 @@ TextureImporter:
         y: 3474
         width: 97
         height: 111
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.40822107, y: 0.5471829}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3723,8 +3705,8 @@ TextureImporter:
         y: 3470
         width: 92
         height: 99
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3864756, y: 0.5773605}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5417,27 +5399,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetFighter--Ryu_199
-      rect:
-        serializedVersion: 2
-        x: 753
-        y: 2353
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbec90a796c824b30800000000000000
-      internalID: 4270129781347569339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: StreetFighter--Ryu_200
       rect:
         serializedVersion: 2
@@ -5546,7 +5507,7 @@ TextureImporter:
       name: StreetFighter--Ryu_205
       rect:
         serializedVersion: 2
-        x: 100
+        x: 99
         y: 2055
         width: 56
         height: 113
@@ -5571,8 +5532,8 @@ TextureImporter:
         y: 2059
         width: 86
         height: 99
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3352001, y: 0.4693172}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5592,8 +5553,8 @@ TextureImporter:
         y: 2057
         width: 89
         height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3407555, y: 0.47051114}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5613,8 +5574,8 @@ TextureImporter:
         y: 2059
         width: 62
         height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.61429375, y: 0.47022203}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5634,8 +5595,8 @@ TextureImporter:
         y: 2071
         width: 83
         height: 99
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7195401, y: 0.48977074}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5655,8 +5616,8 @@ TextureImporter:
         y: 2071
         width: 74
         height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5957592, y: 0.48014322}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5676,8 +5637,8 @@ TextureImporter:
         y: 2071
         width: 42
         height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5482018, y: 0.4803384}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6546,27 +6507,6 @@ TextureImporter:
       bones: []
       spriteID: a33137e76c16e0070800000000000000
       internalID: 8074498687074767674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StreetFighter--Ryu_253
-      rect:
-        serializedVersion: 2
-        x: 1267
-        y: 1594
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0790d20f05b81be60800000000000000
-      internalID: 7976309594792986992
       vertices: []
       indices: 
       edges: []
@@ -8364,8 +8304,8 @@ TextureImporter:
         y: 409
         width: 113
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4850329, y: 1.2303474}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8385,8 +8325,8 @@ TextureImporter:
         y: 409
         width: 95
         height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.87805855}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8406,8 +8346,8 @@ TextureImporter:
         y: 411
         width: 61
         height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.500001, y: 0.6674578}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8427,8 +8367,8 @@ TextureImporter:
         y: 409
         width: 81
         height: 69
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5000008, y: 0.7451238}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8553,8 +8493,8 @@ TextureImporter:
         y: 260
         width: 124
         height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51486564, y: 1.0137194}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8574,8 +8514,8 @@ TextureImporter:
         y: 259
         width: 115
         height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5160289, y: 0.93011117}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8595,8 +8535,8 @@ TextureImporter:
         y: 260
         width: 116
         height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5317817, y: 0.8016369}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8616,8 +8556,8 @@ TextureImporter:
         y: 257
         width: 121
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51523405, y: 1.0783045}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8637,8 +8577,8 @@ TextureImporter:
         y: 259
         width: 120
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.515361, y: 1.2228788}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
