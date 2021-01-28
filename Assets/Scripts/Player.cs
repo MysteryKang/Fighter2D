@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     //-- attacking cast
     public Transform attackPoint;
+    public Transform attackPoint_Back;  // for the spinning kick purpose
     public float attackRange;
     public LayerMask enemyLayers;
 
@@ -27,8 +28,6 @@ public class Player : MonoBehaviour
     bool jump = false;
     public bool attacking = false;
 
-    public GameObject hadokenObject;
-
     public float hadokenRate = 0.3f;
     float nextAttackTime = 0f;
 
@@ -42,6 +41,7 @@ public class Player : MonoBehaviour
 
     public float spinningKickHorizontalSpeed;
 
+    [SerializeField] private float force;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,9 +71,15 @@ public class Player : MonoBehaviour
             horizontal = Input.GetAxisRaw("Horizontal") * speed;
         }
         else {
-            return;
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick"))
+            {
+                return;
+            }
+            else {
+                horizontal = 0f;
+            }
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !jump && !attacking)
         {
             jump = true;
@@ -118,7 +124,6 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.I) && controller.m_Grounded)
             {
                 Hadoken();
-             //   nextAttackTime = Time.time + 1f / hadokenRate;
             }
         }
 
@@ -129,13 +134,10 @@ public class Player : MonoBehaviour
             horizontal = 0f;
             attacking = true;
         }
-        else {
-            attacking = false;
-        }
-
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu") || animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu_Running")) {
-            attacking = false;
-        }
+       
+        //if (animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu") || animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu_Running")) {
+        //    attacking = false;
+        //}
 
         // UpperCutting
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")) {
@@ -149,7 +151,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.U) && !animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")) {
+        if (Input.GetKeyDown(KeyCode.U) && controller.m_Grounded && !attacking) {
             UpperCut();
         }
 
@@ -197,9 +199,16 @@ public class Player : MonoBehaviour
         animator.SetTrigger("LightPunch");
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits) {
-            enemy.GetComponent<HealthSystem>().TakeHits(damage);
-            PushBackward(enemy.GetComponent<Rigidbody2D>());
-            enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+            if (enemy.GetComponent<HealthSystem>().isInvincible)
+                return;
+            else
+            {
+                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                PushBackward(enemy.GetComponent<Rigidbody2D>());
+                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                float direction = controller.m_FacingRight == true ? 1f : -1f;
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
+            }
         }
     }
     #endregion
@@ -211,9 +220,16 @@ public class Player : MonoBehaviour
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits)
         {
-            enemy.GetComponent<HealthSystem>().TakeHits(damage);
-            PushBackward(enemy.GetComponent<Rigidbody2D>());
-            enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+            if (enemy.GetComponent<HealthSystem>().isInvincible)
+                return;
+            else
+            {
+                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                PushBackward(enemy.GetComponent<Rigidbody2D>());
+                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                float direction = controller.m_FacingRight == true ? 1f : -1f;
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
+            }
         }
     }
     #endregion
@@ -254,15 +270,49 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator SpinningKickMovement() {
+        Debug.Log(attacking);
         float direction = transform.localScale.x / Mathf.Abs(transform.localScale.x);
         spinningKickHorizontalSpeed *= direction;
         horizontal = 1f * direction * 0.5f;
         Debug.Log(horizontal);
         yield return new WaitForSeconds(1f);
-        horizontal = 0f;
-        attacking = false;
+        Debug.Log(attacking);
         Debug.Log(horizontal);
         GetComponent<Rigidbody2D>().gravityScale = 5f;
+    }
+
+  //  spinning kick push the enemy both ways   * codes will be simplified later
+    public void SpinningKickToEnemy() {
+        Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in enemyhits)
+        {
+            if (enemy.GetComponent<HealthSystem>().isInvincible)
+                return;
+            else
+            {
+                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                enemy.GetComponent<Animator>().SetTrigger("TakenDown");
+                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                float direction = controller.m_FacingRight == true ? 1f : -1f;
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction * 4f, upperCutForce.y / 2f));
+            }
+        }
+        Collider2D[] enemyhits2 = Physics2D.OverlapCircleAll(attackPoint_Back.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in enemyhits2)
+        {
+            if (enemy.GetComponent<HealthSystem>().isInvincible)
+                return;
+            else
+            {
+                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                enemy.GetComponent<Animator>().SetTrigger("TakenDown");
+                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                float direction = controller.m_FacingRight == true ? -1f : 1f;
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction * 4f, upperCutForce.y / 2f));
+            }
+        }
     }
 
     public void ResetGravity()
@@ -271,7 +321,7 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-
+    // ------ heavy attack caused by upper cut ,  lift up the enemy and move  horizontally 
     public void HeavyAttack()
     {
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -290,16 +340,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    #region Airborne Punch and Airborne Kick 
     private void AirBornePunch() {
         attacking = true;
-        LightAttack();
+     //   LightAttack();
         animator.SetTrigger("AirbornePunch");
     }
     private void AirborneKick() {
         attacking = true;
-        LightAttack();
+    //    LightAttack();
         animator.SetTrigger("AirborneKick");
     }
+    #endregion
 
     public void LightAttack()
     {
@@ -311,10 +363,10 @@ public class Player : MonoBehaviour
             else
             {
                 enemy.GetComponent<HealthSystem>().TakeHits(damage);
-                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+               //enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
                 enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
                 float direction = controller.m_FacingRight == true ? 1f : -1f;
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction, upperCutForce.y));
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
             }
         }
     }

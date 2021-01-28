@@ -8,10 +8,13 @@ public class Hadoken : MonoBehaviour
     private float speed = 10f;
     Vector2 scale;
     [SerializeField] private float hadokenDamage = 1f;
+    CharacterController2D controller;
+    private float force = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
+        controller = GetComponent<CharacterController2D>();
         scale = transform.localScale;
         transform.localScale = new Vector3(Mathf.Abs(scale.x) * direction * 2f, scale.y * 2f);
     }
@@ -23,6 +26,7 @@ public class Hadoken : MonoBehaviour
             collision.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
             Transform enemy = collision.gameObject.transform;
             enemy.localScale = new Vector3(Mathf.Abs(enemy.localScale.x) * -direction, enemy.localScale.y, 1f);
+            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
             Player.canSpawnHadoken = true;
             Destroy(this.gameObject);
         }

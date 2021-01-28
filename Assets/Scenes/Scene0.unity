@@ -364,6 +364,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &163660885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163660886}
+  m_Layer: 0
+  m_Name: AttackPoint(Back)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &163660886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163660885}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.25, y: 0.06, z: -50.6988}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1324119725}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255537737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1086,7 @@ MonoBehaviour:
   controller: {fileID: 495338788}
   animator: {fileID: 495338790}
   attackPoint: {fileID: 499587701}
+  attackPoint_Back: {fileID: 0}
   attackRange: 0.4
   enemyLayers:
     serializedVersion: 2
@@ -1067,11 +1098,11 @@ MonoBehaviour:
   HealthBar: {fileID: 1599067401}
   horizontal: 0
   attacking: 0
-  hadokenObject: {fileID: 0}
   hadokenRate: 0.3
   damage: 10
   upperCutForce: {x: 0, y: 0}
   spinningKickHorizontalSpeed: 0
+  force: 0
 --- !u!114 &495338788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,7 +1380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &674553324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1391,7 +1422,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1d36040a0d9b2490eae6754e9c1f186d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.33333334}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1409,7 +1440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674553323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.02, z: 0}
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2204,6 +2235,7 @@ Transform:
   - {fileID: 984812364}
   - {fileID: 1068969770}
   - {fileID: 1959620532}
+  - {fileID: 163660886}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2289,7 +2321,8 @@ MonoBehaviour:
   controller: {fileID: 1324119726}
   animator: {fileID: 1324119723}
   attackPoint: {fileID: 1959620532}
-  attackRange: 0.4
+  attackPoint_Back: {fileID: 163660886}
+  attackRange: 0.6
   enemyLayers:
     serializedVersion: 2
     m_Bits: 1024
@@ -2300,11 +2333,11 @@ MonoBehaviour:
   HealthBar: {fileID: 1599067401}
   horizontal: 0
   attacking: 0
-  hadokenObject: {fileID: 0}
   hadokenRate: 0.7
   damage: 1
   upperCutForce: {x: 100, y: 800}
   spinningKickHorizontalSpeed: 0
+  force: 100
 --- !u!1 &1375544305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959620531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.401, y: 0.196, z: 0}
+  m_LocalPosition: {x: 0.25, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1324119725}
