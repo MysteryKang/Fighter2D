@@ -1,1 +1,3 @@
 #Fighter2D
+
+Mode 1. diablo3 battle tower. level 1, level 2 ....
