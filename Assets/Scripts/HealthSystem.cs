@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour
     public Animator animator;
 
     public bool isInvincible = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,9 @@ public class HealthSystem : MonoBehaviour
         }
         if (GetComponent<Player>() != null) {
             GetComponent<Player>().attacking = false;
-        }       
+            GetComponent<Player>().currentState = PlayerState.Idle;
+        }
+        
     }
 
     public void TakeHits(float damage) {
@@ -63,6 +66,9 @@ public class HealthSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(health <= 0f)
+        {
+            GameManger.isGameOver = true;
+        }
     }
 }

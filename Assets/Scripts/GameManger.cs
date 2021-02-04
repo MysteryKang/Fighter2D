@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameManger : MonoBehaviour
 {
     [SerializeField] private float timeScale = 1f;
+    public static bool isGameOver;
 
     // Start is called before the first frame update
     void Start()
     {
+        isGameOver = false;
         Application.targetFrameRate = 60;
     }
 
@@ -16,5 +18,6 @@ public class GameManger : MonoBehaviour
     void Update()
     {
         Time.timeScale = timeScale;
+      
     }
 }

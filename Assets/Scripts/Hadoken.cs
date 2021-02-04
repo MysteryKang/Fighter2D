@@ -39,7 +39,7 @@ public class Hadoken : MonoBehaviour
         position += new Vector2(direction * speed * Time.deltaTime, 0f);
         transform.position = position;
 
-        if (Mathf.Abs(transform.position.x) > 20f) {
+        if (Mathf.Abs(transform.position.x) > 10f) {
             Player.canSpawnHadoken = true;
             Destroy(this.gameObject);
         }
