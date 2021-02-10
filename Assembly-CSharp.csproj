@@ -58,12 +58,19 @@
     <Compile Include="Assets/Scripts/EnemyAI.cs" />
     <Compile Include="Assets/Scripts/FightingCombo.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
+    <Compile Include="Assets/Scripts/Controller/LeftButton.cs" />
     <Compile Include="Assets/Scripts/HealthSystem.cs" />
+    <Compile Include="Assets/Scripts/Controller/ButtonB.cs" />
+    <Compile Include="Assets/Scripts/Controller/ButtonA.cs" />
     <Compile Include="Assets/Scripts/CharacterController2D.cs" />
     <Compile Include="Assets/Scripts/Player2.cs" />
+    <Compile Include="Assets/Scripts/CombatMovement.cs" />
     <Compile Include="Assets/Scripts/GameManger.cs" />
-    <Compile Include="Assets/Scripts/TestingAction.cs" />
+    <Compile Include="Assets/Scripts/TestScript.cs" />
+    <Compile Include="Assets/Scripts/Controller/RightButton.cs" />
+    <Compile Include="Assets/Scripts/Controller/JumpButton.cs" />
     <Compile Include="Assets/Scripts/Hadoken.cs" />
+    <Compile Include="Assets/Scripts/Controller/SpecialButton.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

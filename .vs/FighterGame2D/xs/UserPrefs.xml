@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{354FDA02-5333-F3D3-92E1-E5C7CD5709D3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FightingCombo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/SpecialButton.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="223" Column="14" />
-      <File FileName="Assets/Scripts/CharacterController2D.cs" Line="64" Column="29" />
-      <File FileName="Assets/Scripts/Hadoken.cs" Line="36" Column="18" />
-      <File FileName="Assets/Scripts/Player2.cs" Line="45" Column="18" />
-      <File FileName="Assets/Scripts/HealthSystem.cs" Line="46" Column="48" />
-      <File FileName="Assets/GameManger.cs" Line="20" Column="2" />
-      <File FileName="Assets/TestingAction.cs" Line="34" Column="2" />
-      <File FileName="Assets/Scripts/GameManger.cs" Line="21" Column="7" />
-      <File FileName="Assets/Scripts/Combo.cs" Line="74" Column="65" />
-      <File FileName="Assets/Scripts/EnemyAI.cs" Line="29" Column="59" />
+      <File FileName="Assets/Scripts/FightingCombo.cs" Line="94" Column="1" />
+      <File FileName="Assets/Scripts/TestScript.cs" Line="329" Column="12" />
+      <File FileName="Assets/Scripts/Player2.cs" Line="160" Column="23" />
+      <File FileName="Assets/Scripts/Player.cs" Line="155" Column="1" />
+      <File FileName="Assets/Scripts/GameManger.cs" Line="26" Column="34" />
+      <File FileName="Assets/Scripts/Hadoken.cs" Line="63" Column="1" />
+      <File FileName="Assets/Scripts/HealthSystem.cs" Line="35" Column="53" />
+      <File FileName="Assets/Scripts/Controller/JumpButton.cs" Line="16" Column="2" />
+      <File FileName="Assets/Scripts/Controller/ButtonA.cs" Line="18" Column="2" />
+      <File FileName="Assets/Scripts/Controller/ButtonB.cs" Line="10" Column="58" />
+      <File FileName="Assets/Scripts/Controller/LeftButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/RightButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/SpecialButton.cs" Line="4" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,20 +21,19 @@
           <Node name="FighterGame2D" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="FightingCombo.cs" selected="True" />
+                <Node name="Controller" expanded="True">
+                  <Node name="SpecialButton.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="492cfaae-2307-4e82-9dc2-c1d6a4bd1b28" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a40e4e6a-8bbe-428c-aa9c-aad6225ef0f6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

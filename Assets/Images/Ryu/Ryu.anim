@@ -85,9 +85,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: ResetAirControl
+    functionName: ResetPlayerState
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 756167c3896a947789172250b0b791e7, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: be68aed446a394ff79e1f4d91eca0e4e, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

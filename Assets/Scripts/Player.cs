@@ -24,6 +24,11 @@ public class Player : MonoBehaviour
     public LayerMask enemyLayers;
     public Transform hadokenPoint;
 
+    //-------- if successfully hit enemy before it wakes up , count++
+    //private bool successfullHit = false;
+    // int hitCount = 0;
+
+    public bool isBeingAttacked = false;
 
 
     [Header("Grouncheck")]
@@ -39,7 +44,6 @@ public class Player : MonoBehaviour
     public bool attacking = false;
 
     public float hadokenRate = 0.3f;
-    float nextAttackTime = 0f;
 
     public float damage = 1f;
 
@@ -56,10 +60,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         combo = GetComponent<FightingCombo>();
-        
     }
 
-    // --- spawning hadoken here and assign <Hadoken> class to the gameobject
+    // --- spawning hadoken here 
     public void SpawnHadoken() {
         GameObject hdk = new GameObject();
         hdk.transform.position = hadokenPoint.position;
@@ -68,8 +71,10 @@ public class Player : MonoBehaviour
         hdk.AddComponent<PolygonCollider2D>();
         hdk.GetComponent<PolygonCollider2D>().isTrigger = true;
         hdk.AddComponent<Hadoken>();
+        hdk.GetComponent<Hadoken>().self = gameObject.name;
         hdk.GetComponent<Hadoken>().direction = transform.localScale.x / Mathf.Abs(transform.localScale.x);
         hdk.gameObject.name = "hadoken";
+        hdk.gameObject.layer = 11;
         hdk.GetComponent<SpriteRenderer>().sortingLayerName = "Hadoken"; 
         canSpawnHadoken = false;
     }
@@ -78,25 +83,30 @@ public class Player : MonoBehaviour
     void Update()
     {
         animator.speed = animationSpeed;
-        if (!attacking)
+        // this needs to be optimized
+        if ((!attacking && currentState != PlayerState.IsBeingAttacked) || combo.curAttack != null)
         {
             horizontal = Input.GetAxisRaw("Horizontal") * speed;
         }
-        else {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick"))
+        else if(attacking){
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") || isBeingAttacked)
+                //|| animator.GetCurrentAnimatorStateInfo(0).IsName("AirBornePunch")
+                //|| animator.GetCurrentAnimatorStateInfo(0).IsName("AirBorneKick"))
             {
                 return;
             }
-            else {
+            else{
                 horizontal = 0f;
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !jump && !attacking)
+        
+        if (Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !jump && !attacking && !isBeingAttacked)
         {
             jump = true;
         }
- 
+        animator.SetBool("Jump", jump);
+
         animator.SetBool("isGrounded", controller.m_Grounded);
 
         //------- determine whether it is moving horizontally or not
@@ -104,7 +114,7 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isMoving", true);
         }
-        else {
+        else if(horizontal == 0) {
             animator.SetBool("isMoving", false);
         }
         // ---------
@@ -123,19 +133,34 @@ public class Player : MonoBehaviour
             }
         }
 
-      
-        if (Input.GetKeyDown(KeyCode.J) && controller.m_Grounded) {
-            LightPunch();
-        }
-        if (Input.GetKeyDown(KeyCode.K) && controller.m_Grounded)
+        // if the player is not getting attacked, start accepting inputs
+        if (!isBeingAttacked)
         {
-            Kick();
-        }
-
-        if (canSpawnHadoken) {
-            if (Input.GetKeyDown(KeyCode.I) && controller.m_Grounded)
+            if (Input.GetKeyDown(KeyCode.J) && controller.m_Grounded)
             {
-                Hadoken();
+                LightPunch();
+            }
+            if (Input.GetKeyDown(KeyCode.K) && controller.m_Grounded)
+            {
+                Kick();
+            }
+
+            if (canSpawnHadoken)
+            {
+                if (Input.GetKeyDown(KeyCode.I) && controller.m_Grounded)
+                {
+                    Hadoken();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.U) && controller.m_Grounded && !animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut"))
+            {
+                UpperCut();
+            }
+
+            if (Input.GetKeyDown(KeyCode.H) && !animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") && controller.m_Grounded)
+            {
+                SpinningKick();
             }
         }
 
@@ -163,19 +188,27 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.U) && controller.m_Grounded) {
-            UpperCut();
-        }
-
-        if (Input.GetKeyDown(KeyCode.H) && !animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") && controller.m_Grounded)
-        {
-            SpinningKick();
-        }
-
         animator.SetBool("isGrounded", controller.m_Grounded);
-        animator.SetFloat("yVelocity", GetComponent<Rigidbody2D>().velocity.y);
+        if (!isBeingAttacked)
+        {
+            animator.SetFloat("yVelocity", GetComponent<Rigidbody2D>().velocity.y);
+        }
+        else {
+            
+        }
         animator.SetFloat("xVelocity", GetComponent<Rigidbody2D>().velocity.x);
 
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakeHit"))
+        {
+            currentState = PlayerState.IsBeingAttacked;
+        }
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakenDown"))
+        {
+            currentState = PlayerState.TakenDown;
+        }
+        if (attacking) {
+            currentState = PlayerState.Attacking;
+        }
     }
 
     // when enemy gets attacked, it'll be pushed backward 
@@ -184,7 +217,6 @@ public class Player : MonoBehaviour
         rd.AddForce(new Vector2(10f * direction, 0f));
     }
     // ------------------------------------------
-
 
     private void FixedUpdate()
     {
@@ -209,17 +241,63 @@ public class Player : MonoBehaviour
     #endregion
 
     #region  Light Punch
-    private void LightPunch()
+    public void LightPunch()
     {
         if (combo.curAttack == null)
         {
             attacking = true;
+            horizontal = 0f;
             animator.SetTrigger("LightPunch");
         }
     }
     #endregion
 
-    public void DetectEnemyAndGiveDamage() {
+    #region Kick 
+    public void Kick()
+    {
+        if (combo.curAttack == null)
+        {
+            horizontal = 0f;
+            attacking = true;
+            animator.SetTrigger("Kick");
+        }
+    }
+    #endregion
+
+    // used in simple attack
+    public void DetectEnemyAndGiveDamage()
+    {
+        Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
+        if (enemy != null)
+        {
+            //Transform enemy = enem.transform.parent;
+            //Debug.Log(enemy.gameObject.name);
+            if (enemy.GetComponent<HealthSystem>() == null)
+            {
+                Debug.Log("this enemy does not contain healthsystem");
+            }
+            else
+            {
+                if (enemy.GetComponent<HealthSystem>().isInvincible)
+                    return;
+                else
+                {
+                    enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                    PushBackward(enemy.GetComponent<Rigidbody2D>());
+                    float direction = controller.m_FacingRight == true ? 1f : -1f;
+                    //enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
+                    if (enemy.GetComponent<CharacterController2D>().m_FacingRight == controller.m_FacingRight) {
+                        enemy.GetComponent<CharacterController2D>().Flip();
+                    } 
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
+                    this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
+                }
+            }
+        }
+        else return;
+    }
+
+    public void ComboTheEnemy() {
         Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
         if (enemy != null)
         {
@@ -231,18 +309,11 @@ public class Player : MonoBehaviour
                 PushBackward(enemy.GetComponent<Rigidbody2D>());
                 float direction = controller.m_FacingRight == true ? 1f : -1f;
                 enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-                this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
+                //enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
+                //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
             }
         }
         else return;
-    }
-
-
-    private void Kick()
-    {
-        attacking = true;
-        animator.SetTrigger("Kick");
     }
 
     //private void Kick()
@@ -328,15 +399,21 @@ public class Player : MonoBehaviour
         Collider2D[] enemyhits2 = Physics2D.OverlapCircleAll(position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits2)
         {
-            if (enemy.GetComponent<HealthSystem>().isInvincible)
-                return;
-            else
+            if (enemy.GetComponent<HealthSystem>() != null)
             {
-                enemy.GetComponent<HealthSystem>().TakeHits(damage);
-                enemy.GetComponent<Animator>().SetTrigger("TakenDown");
-                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
-                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction * 5f, upperCutForce.y / 2f));
+                if (enemy.GetComponent<HealthSystem>().isInvincible)
+                    return;
+                else
+                {
+                    enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                    enemy.GetComponent<Animator>().SetTrigger("TakenDown");
+                    enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                    if (enemy.GetComponent<CharacterController2D>().m_FacingRight == controller.m_FacingRight)
+                    {
+                        enemy.GetComponent<CharacterController2D>().Flip();
+                    }
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction * 7f, upperCutForce.y / 2f));
+                }
             }
         }
     }
@@ -354,27 +431,37 @@ public class Player : MonoBehaviour
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits)
         {
-            if (enemy.GetComponent<HealthSystem>().isInvincible)
-                return;
+            if (enemy.GetComponent<HealthSystem>() == null)
+            {
+                Debug.Log("enemy does not contain healthsystem");
+            }
             else {
-                enemy.GetComponent<HealthSystem>().TakeHits(damage);
-                enemy.GetComponent<Animator>().SetTrigger("TakenDown");
-                enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
-                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
-                float direction = controller.m_FacingRight == true ? 1f : -1f;
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction, upperCutForce.y));
+                if (enemy.GetComponent<HealthSystem>().isInvincible)
+                    return;
+                else
+                {
+                    enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                    enemy.GetComponent<Animator>().SetTrigger("TakenDown");
+                    enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                    if (enemy.GetComponent<CharacterController2D>().m_FacingRight == controller.m_FacingRight)
+                    {
+                        enemy.GetComponent<CharacterController2D>().Flip();
+                    }
+                    float direction = controller.m_FacingRight == true ? 1f : -1f;
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(upperCutForce.x * direction, upperCutForce.y));
+                }
             }
         }
     }
 
     #region Airborne Punch and Airborne Kick 
     private void AirBornePunch() {
-        attacking = true;
+       // attacking = true;
      //   LightAttack();
         animator.SetTrigger("AirbornePunch");
     }
     private void AirborneKick() {
-        attacking = true;
+      //  attacking = true;
     //    LightAttack();
         animator.SetTrigger("AirborneKick");
     }
@@ -390,8 +477,11 @@ public class Player : MonoBehaviour
             else
             {
                 enemy.GetComponent<HealthSystem>().TakeHits(damage);
-               //enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
-                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+                //enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+                if (enemy.GetComponent<CharacterController2D>().m_FacingRight == controller.m_FacingRight)
+                {
+                    enemy.GetComponent<CharacterController2D>().Flip();
+                }
                 float direction = controller.m_FacingRight == true ? 1f : -1f;
                 enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
             }
@@ -411,62 +501,31 @@ public class Player : MonoBehaviour
     //}
 
 
-    //-------------------
-    // using current playing anition to get current game state.   this function is a lil bit slow may be because the fps and animation duration discrepancy
-    //-------------------
-    //private void UpdateCurrentState() {
-    //    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu"))
-    //    {
-    //        currentState = PlayerState.Idle;
-    //        Debug.Log(currentState);
-    //    }
-    //    else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Ryu_Running"))
-    //    {
-    //        currentState = PlayerState.Running;
-    //        Debug.Log(currentState);
-    //    }
-    //    else if (animator.GetCurrentAnimatorStateInfo(0).IsName("LightPunch")
-    //        || animator.GetCurrentAnimatorStateInfo(0).IsName("LightKick")
-    //        || animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")
-    //        || animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick")
-    //        || animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken")
-    //        || animator.GetCurrentAnimatorStateInfo(0).IsName("AirbornePunch")
-    //        || animator.GetCurrentAnimatorStateInfo(0).IsName("AirborneKick"))
-    //    {
-    //        currentState = PlayerState.Attacking;
-    //        Debug.Log(currentState);
-    //    }
-    //    else if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakeHit"))
-    //    {
-    //        currentState = PlayerState.IsBeingAttacked;
-    //        Debug.Log(currentState);
-    //    }
-    //    else if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakenDown"))
-    //    {
-    //        currentState = PlayerState.TakenDown;
-    //        Debug.Log(currentState);
-    //    }
+    
+    // draw gismos of attackpoint and groundcheck in the  scene
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    //    Gizmos.DrawWireSphere(groundCheck.position, radius);
+        
     //}
 
-    // draw gismos of attackpoint and groundcheck in the  scene
-    private void OnDrawGizmosSelected()
+    public void ProcessInput()
     {
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-        Gizmos.DrawWireSphere(groundCheck.position, radius);
         
-    }
 
+    }
 }
+
+
 
 
 //// player's different status  TO be used later !!
 public enum PlayerState
 {
     Idle = 0,
-    Running = 1,
-    Attacking = 2,
-    IsBeingAttacked = 3,
-    TakenDown = 4
-
+    Attacking = 1,
+    IsBeingAttacked = 2,
+    TakenDown = 3,
 }
 //// 

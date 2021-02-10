@@ -2,19 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
-public enum AttackType { heavy = 0, light = 1, kick = 2}
+public enum AttackType { special = 0, light = 1, kick = 2 }
 public class FightingCombo : MonoBehaviour
 {
     // list all the keys that compose combo here.
     [Header("Inputs")]
-    public KeyCode heavyKey;
+    public KeyCode specialKey;
     public KeyCode lightKey;
     public KeyCode kickKey;
 
+
+    [Header("InputButtons")]
+    public Button lightPunch;
+    public Button lightKick;
+    public Button jumpButton;
+    public Button spButton;
+   
+
     // list all the Attack Animation here
     [Header("Attacks")]
-    public Attack heavyAttack;
+    public Attack specialAttack;
     public Attack lightAttack;
     public Attack kickAttack;
     public List<Combo> combos;
@@ -30,11 +39,18 @@ public class FightingCombo : MonoBehaviour
     ComboInput lastInput = null;
     List<int> currentCombos = new List<int>();
     float timer = 0f;
-    float leeway = 0f;
+    public float leeway = 0f;
     bool skip = false;
+    bool isComboing = false;
+
+    ComboInput input;
 
     CharacterController2D controller;
     Player myself;
+
+    float sec = 0;
+
+    bool startCountingTime = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +58,38 @@ public class FightingCombo : MonoBehaviour
         controller = GetComponent<CharacterController2D>();
         myself = GetComponent<Player>();
         PrimeCombos();
+        SettingUpButtons();
+    }
+
+    private void SettingUpButtons() {
+
+        if (lightPunch != null & lightKick != null)
+        {
+            lightPunch.onClick.AddListener(() =>
+            {
+                ButtonEvent(AttackType.light);
+            });
+            lightKick.onClick.AddListener(() =>
+            {
+                ButtonEvent(AttackType.kick);
+            });
+            spButton.onClick.AddListener(() =>
+            {
+                ButtonEvent(AttackType.special);
+            });
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void ButtonEvent(AttackType type) {
+        if (!startCountingTime)
+        {
+            startCountingTime = true;
+        }
+        input = new ComboInput(type);
     }
 
     void PrimeCombos()
@@ -49,6 +97,7 @@ public class FightingCombo : MonoBehaviour
         for (int i = 0; i < combos.Count; i++)
         {
             Combo c = combos[i];
+            // add listener to those composed combos
             c.onInputted.AddListener(() =>
             {
                 // call attack function with the attack
@@ -62,6 +111,22 @@ public class FightingCombo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lastInput = input;
+        if (startCountingTime)
+        {
+            leeway += Time.deltaTime;
+            if (leeway >= comboLeeway)
+            {
+                startCountingTime = false;
+                leeway = 0;
+                input = null;
+                ResetCombos();
+            }
+        }
+        else {
+            leeway = 0;
+        }
+
         if (curAttack != null)
         {
             if (timer >= 0)
@@ -71,18 +136,16 @@ public class FightingCombo : MonoBehaviour
             return;
         }
 
-
-        // if combo input count is bigger than 2
         if (currentCombos.Count > 0)
         {
             leeway += Time.deltaTime;
             if (leeway >= comboLeeway)
             {
-                if (lastInput != null && currentCombos.Count >= maxComboCount)
+                if (lastInput != null)
                 {
-                    Attack(getAttackFromType(lastInput.type));
-                    Debug.Log(lastInput.type);
-                    lastInput = null;
+                    //// Attack(getAttackFromType(lastInput.type));
+                    // Debug.Log(lastInput.type);
+                    // lastInput = null;
                 }
                 ResetCombos();
             }
@@ -90,59 +153,104 @@ public class FightingCombo : MonoBehaviour
         else
             leeway = 0;
 
-        ComboInput input = null;
-        if (Input.GetKeyDown(heavyKey))
-        {
-            input = new ComboInput(AttackType.heavy);
+        //ComboInput input = null;
 
-        }
-        if (Input.GetKeyDown(lightKey))
-        {
-            input = new ComboInput(AttackType.light);
+        //#region Getting Inputs 
+        //if (Input.GetKeyDown(heavyKey))
+        //{
+        //    input = new ComboInput(AttackType.heavy);
 
-        }
-        if (Input.GetKeyDown(kickKey))
-        {
-            input = new ComboInput(AttackType.kick);
-        }
-        if (input == null) return;
-        lastInput = input;
+        //}
+        //if (Input.GetKeyDown(lightKey))
+        //{
+        //    input = new ComboInput(AttackType.light);
 
-        List<int> remove = new List<int>();
-        for (int i = 0; i < currentCombos.Count; i++)
-        {
-            Combo c = combos[currentCombos[i]];
-            if (c.continueCombo(input))
-                leeway = 0;
-            else
-                remove.Add(i);
-        }
+        //}
 
-        // skip one frame
-        if (skip)
-        {
-            skip = false;
-            return;
-        }
+        //if (Input.GetKeyDown(kickKey))
+        //{
+        //    input = new ComboInput(AttackType.kick);
+        //}
 
-        for (int i = 0; i < combos.Count; i++)
+        //if (input == null) return;
+        //#endregion
+
+
+        //lastInput = input;
+
+        //List<int> remove = new List<int>();
+        //for (int i = 0; i < currentCombos.Count; i++)
+        //{
+        //    Combo c = combos[currentCombos[i]];
+        //    if (c.continueCombo(theInput))
+        //        leeway = 0;
+        //    else
+        //        remove.Add(i);
+        //}
+
+
+        //skip one frame
+        //if (skip)
+        //{
+        //    skip = false;
+        //    return;
+        //}
+
+        //skip one frame
+        //if (skip)
+        //{
+        //    skip = false;
+        //    return;
+        //}
+
+        //for (int i = 0; i < combos.Count; i++)
+        //{
+        //    if (currentCombos.Contains(i)) continue;
+        //    if (combos[i].continueCombo(input))
+        //    {
+        //        currentCombos.Add(i);
+        //        leeway = 0;
+        //    }
+        //}
+
+
+        if (input != null)
         {
-            if (currentCombos.Contains(i)) continue;
-            if (combos[i].continueCombo(input))
+            List<int> remove = new List<int>();
+            for (int i = 0; i < currentCombos.Count; i++)
             {
-                currentCombos.Add(i);
-                leeway = 0;
+                Combo c = combos[currentCombos[i]];
+                if (c.continueCombo(input))
+                    leeway = 0;
+                else
+                    remove.Add(i);
+            }
+
+            /// custom button inputs
+            for (int i = 0; i < combos.Count; i++)
+            {
+                if (currentCombos.Contains(i)) continue;
+                if (combos[i].continueCombo(input))
+                {
+                    currentCombos.Add(i);
+                    leeway = 0;
+                }
+            }
+
+            // remove items from the currentCombo list
+            foreach (int i in remove)
+            {
+                currentCombos.RemoveAt(i);
             }
         }
+        input = null;
+        // this one below is not good for single aka lightattack, cause it has delay time which is comboleeway.
+        //if (currentCombos.Count <= 0) // 
+        //{
+        //    Debug.Log("current combos count == 0");
+        //    //  Attack(getAttackFromType(input.type));
+        //}
 
-        foreach (int i in remove)
-        {
-            currentCombos.RemoveAt(i);
-        }
-        if (currentCombos.Count <= 0)
-        {
-            Attack(getAttackFromType(input.type));
-        }
     }
 
     void ResetCombos()
@@ -158,14 +266,24 @@ public class FightingCombo : MonoBehaviour
 
     Attack getAttackFromType(AttackType t)
     {
-        if (t == AttackType.heavy)
-            return heavyAttack;
+        if (t == AttackType.special)
+            return specialAttack;
         if (t == AttackType.light)
             return lightAttack;
         if (t == AttackType.kick)
             return kickAttack;
         return null;
     }
+
+    //void SingleAttack(Attack att)
+    //{
+    //    if (controller.m_Grounded && curAttack == null)
+    //    {
+    //        //  timer = att.length;
+    //        Debug.Log("lightattack");
+    //        ani.SetTrigger(att.name);
+    //    }
+    //}
 
     void Attack(Attack att)
     {
@@ -175,7 +293,8 @@ public class FightingCombo : MonoBehaviour
             timer = att.length;
             ani.Play(att.name, -1, 0);
         }
-        else {
+        else
+        {
             return;
         }
     }
@@ -183,13 +302,15 @@ public class FightingCombo : MonoBehaviour
 
 
 [System.Serializable]
-public class Attack {
+public class Attack
+{
     public string name;
     public float length;
 }
 
 [System.Serializable]
-public class ComboInput {
+public class ComboInput
+{
     public AttackType type;
 
     public ComboInput(AttackType t)
@@ -197,31 +318,35 @@ public class ComboInput {
         type = t;
     }
 
-    public bool isSameAs(ComboInput t) {
-        return (type == t.type); // add && movement == t.movement
+    public bool isSameAs(ComboInput t)
+    {
+        return type == t.type; 
     }
 }
 
 
 [System.Serializable]
-public class Combo {
+public class Combo
+{
     public List<ComboInput> inputs;
     public Attack comboAttack;
     public UnityEvent onInputted;
     int curInput = 0;
 
-    public bool continueCombo(ComboInput i) {
+    public bool continueCombo(ComboInput i)
+    {
         if (inputs[curInput].isSameAs(i))
         {
             curInput++;
             if (curInput >= inputs.Count)
             {
-                onInputted.Invoke();
+                onInputted.Invoke(); // if inputs match combo, invoke the combo action!
                 curInput = 0;
             }
             return true;
         }
-        else {
+        else
+        {
             curInput = 0;
             return false;
         }
@@ -233,7 +358,8 @@ public class Combo {
         return inputs[curInput];
     }
 
-    public void ResetCombo() {
+    public void ResetCombo()
+    {
         curInput = 0;
     }
 }

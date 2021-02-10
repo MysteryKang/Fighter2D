@@ -18,15 +18,24 @@ public class HealthSystem : MonoBehaviour
         healthBar.value = 1.0f;
     }
 
-    public void ResetAirControl() {
+    public void ResetPlayerState() {
         if (GetComponent<CharacterController2D>() != null) {
             GetComponent<CharacterController2D>().m_AirControl = true;
         }
         if (GetComponent<Player>() != null) {
             GetComponent<Player>().attacking = false;
+            GetComponent<Player>().isBeingAttacked = false;
             GetComponent<Player>().currentState = PlayerState.Idle;
         }
-        
+        if (GetComponent<Player2>() != null)
+        {
+            GetComponent<Player2>().attacking = false;
+            GetComponent<Player2>().isBeingAttacked = false;
+            GetComponent<Player2>().currentState = PlayerState.Idle;
+            GetComponent<Player2>().horizontal = 0f;
+        }
+        animator.ResetTrigger("Jump");
+
     }
 
     public void TakeHits(float damage) {
@@ -34,6 +43,15 @@ public class HealthSystem : MonoBehaviour
             return;
         else {
             health -= damage;
+            if (GetComponent<Player2>() != null)
+            {
+                GetComponent<Player2>().isBeingAttacked = true;
+                GetComponent<Player2>().CountingComboHit();
+            }
+            //if (GetComponent<Player>() != null)
+            //{
+            //    GetComponent<Player>().
+            //}
             if (health <= 0)
             {
                 healthBar.value = 0f;
@@ -43,7 +61,7 @@ public class HealthSystem : MonoBehaviour
             if (health > 0)
             {
                 // play taking hits animation
-                animator.SetTrigger("TakeHit");
+                animator.Play("TakeHit", -1, 0);
                 healthBar.value = health / maxHealth;
                 if (health <= 30)
                 {
