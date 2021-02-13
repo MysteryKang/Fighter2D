@@ -105,19 +105,7 @@ public class Player2 : MonoBehaviour
         canSpawnHadoken = false;
     }
 
-    public void CountingComboHit() {
-        //if (GetComponent<EncounterCombo>().isConsecutiveCombo)
-        //{
-        //    Debug.Log("counting");
-        //    comboHit += 1;
-        //    comboText.text = comboHit.ToString() + " Hits";
-        //}
-        //else {
-        //    comboHit = 0;
-        //    comboText.text = " ";
-        //} 
-  
-    }
+   
 
     #region setting up buttons here
     public void SetUpButtons() {

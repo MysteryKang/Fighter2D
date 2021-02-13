@@ -1168,14 +1168,14 @@ MonoBehaviour:
   attacking: 0
   hadokenRate: 0.7
   damage: 1
-  upperCutForce: {x: 0, y: 0}
+  upperCutForce: {x: 100, y: 800}
   spinningKickHorizontalSpeed: 0
   isMoveable: 0
   isJumping: 0
   punching: 0
   kicking: 0
   isSpecialKeyPressed: 0
-  force: 0
+  force: 200
 --- !u!114 &397403839
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -45,7 +45,6 @@ public class HealthSystem : MonoBehaviour
             if (GetComponent<Player2>() != null)
             {
                 GetComponent<Player2>().isBeingAttacked = true;
-                GetComponent<Player2>().CountingComboHit();
             }
             //if (GetComponent<Player>() != null)
             //{
