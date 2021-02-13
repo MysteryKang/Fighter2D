@@ -1,0 +1,3511 @@
+fileFormatVersion: 2
+guid: 7dbaa36f97b6e4191b901675c083ef9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5750474312071238764
+    second: Barlog_0
+  - first:
+      213: -9121323880313912325
+    second: Barlog_1
+  - first:
+      213: -5359763328591605459
+    second: Barlog_2
+  - first:
+      213: -7897897093940688877
+    second: Barlog_3
+  - first:
+      213: -8633090045200655377
+    second: Barlog_4
+  - first:
+      213: -9054133256165409139
+    second: Barlog_5
+  - first:
+      213: 5303156636869050640
+    second: Barlog_6
+  - first:
+      213: 414954114324813883
+    second: Barlog_7
+  - first:
+      213: 781705495353335835
+    second: Barlog_8
+  - first:
+      213: -2905706011453458649
+    second: Barlog_9
+  - first:
+      213: 9061368092971939062
+    second: Barlog_10
+  - first:
+      213: -1861170982264404092
+    second: Barlog_11
+  - first:
+      213: 3029106391465286729
+    second: Barlog_12
+  - first:
+      213: 9089956397410029581
+    second: Barlog_13
+  - first:
+      213: 3837970483578135204
+    second: Barlog_14
+  - first:
+      213: -960866629666920936
+    second: Barlog_15
+  - first:
+      213: -6918753478983034663
+    second: Barlog_16
+  - first:
+      213: -1001633795075050697
+    second: Barlog_17
+  - first:
+      213: 2611490491366456958
+    second: Barlog_18
+  - first:
+      213: -2358244625618847738
+    second: Barlog_19
+  - first:
+      213: -4348543271132582510
+    second: Barlog_20
+  - first:
+      213: 6238762597804811890
+    second: Barlog_21
+  - first:
+      213: -8912743862169451093
+    second: Barlog_22
+  - first:
+      213: 8144185345164657371
+    second: Barlog_23
+  - first:
+      213: -3622316380191570187
+    second: Barlog_24
+  - first:
+      213: -7210176690578335781
+    second: Barlog_25
+  - first:
+      213: 4092754576857751154
+    second: Barlog_26
+  - first:
+      213: -76637094412161865
+    second: Barlog_27
+  - first:
+      213: 2439094974522744755
+    second: Barlog_28
+  - first:
+      213: 8095758236307831755
+    second: Barlog_29
+  - first:
+      213: -2065921687769229724
+    second: Barlog_30
+  - first:
+      213: -6408190208602977787
+    second: Barlog_31
+  - first:
+      213: -8923191852892171601
+    second: Barlog_32
+  - first:
+      213: -8597649740162511089
+    second: Barlog_33
+  - first:
+      213: 1423353087711573293
+    second: Barlog_34
+  - first:
+      213: -2803091661741736640
+    second: Barlog_35
+  - first:
+      213: 6905876072415780930
+    second: Barlog_36
+  - first:
+      213: 9024021337681696947
+    second: Barlog_37
+  - first:
+      213: 2057715084539433559
+    second: Barlog_38
+  - first:
+      213: 3522644912062539840
+    second: Barlog_39
+  - first:
+      213: 7036126670735630632
+    second: Barlog_40
+  - first:
+      213: -8888087763589851763
+    second: Barlog_41
+  - first:
+      213: -1409434744570752850
+    second: Barlog_42
+  - first:
+      213: -344256326126901154
+    second: Barlog_43
+  - first:
+      213: 1069797876634940871
+    second: Barlog_44
+  - first:
+      213: 368056071550305329
+    second: Barlog_45
+  - first:
+      213: 2005833440980798131
+    second: Barlog_46
+  - first:
+      213: -1219929427296142380
+    second: Barlog_47
+  - first:
+      213: 624035879804607986
+    second: Barlog_48
+  - first:
+      213: 2125873131022447218
+    second: Barlog_49
+  - first:
+      213: 6363475204736921100
+    second: Barlog_50
+  - first:
+      213: 4387874367310708121
+    second: Barlog_51
+  - first:
+      213: -6286584636652023529
+    second: Barlog_52
+  - first:
+      213: 8907310867872000548
+    second: Barlog_53
+  - first:
+      213: -8893263357582068196
+    second: Barlog_54
+  - first:
+      213: -7249123416628811702
+    second: Barlog_55
+  - first:
+      213: -4382127428064271787
+    second: Barlog_56
+  - first:
+      213: 2819914240782225177
+    second: Barlog_57
+  - first:
+      213: -6295069945760166633
+    second: Barlog_58
+  - first:
+      213: -4994076360055413029
+    second: Barlog_59
+  - first:
+      213: -4985726222619808557
+    second: Barlog_60
+  - first:
+      213: -888265324728555665
+    second: Barlog_61
+  - first:
+      213: -3459257362750824305
+    second: Barlog_62
+  - first:
+      213: 1044816497410622330
+    second: Barlog_63
+  - first:
+      213: 1534406488419013634
+    second: Barlog_64
+  - first:
+      213: 3897795737306115012
+    second: Barlog_65
+  - first:
+      213: -5879088816229531080
+    second: Barlog_66
+  - first:
+      213: -5991436991722680341
+    second: Barlog_67
+  - first:
+      213: 3662509439680005584
+    second: Barlog_68
+  - first:
+      213: 9058223058447153996
+    second: Barlog_69
+  - first:
+      213: -557115434751843569
+    second: Barlog_70
+  - first:
+      213: -7843624983440434486
+    second: Barlog_71
+  - first:
+      213: -3294727087914594253
+    second: Barlog_72
+  - first:
+      213: 1811756276657847654
+    second: Barlog_73
+  - first:
+      213: -5484741254262718636
+    second: Barlog_74
+  - first:
+      213: 990205268820133083
+    second: Barlog_75
+  - first:
+      213: -9091157203708112429
+    second: Barlog_76
+  - first:
+      213: 2633736854510482180
+    second: Barlog_77
+  - first:
+      213: -3539970695418268165
+    second: Barlog_78
+  - first:
+      213: 6566658778127376823
+    second: Barlog_79
+  - first:
+      213: 5378674691698853505
+    second: Barlog_80
+  - first:
+      213: -4903940519000318698
+    second: Barlog_81
+  - first:
+      213: -8979366892252796359
+    second: Barlog_82
+  - first:
+      213: 3596557016641713635
+    second: Barlog_83
+  - first:
+      213: 164121537522578261
+    second: Barlog_84
+  - first:
+      213: -41592787105096461
+    second: Barlog_85
+  - first:
+      213: -4831606583053407725
+    second: Barlog_86
+  - first:
+      213: -7764455041160857956
+    second: Barlog_87
+  - first:
+      213: 2713137283539754582
+    second: Barlog_88
+  - first:
+      213: -5783559147360979891
+    second: Barlog_89
+  - first:
+      213: -1698818870040041063
+    second: Barlog_90
+  - first:
+      213: -1490056849124969140
+    second: Barlog_91
+  - first:
+      213: 6169791539176418542
+    second: Barlog_92
+  - first:
+      213: 1247357688389673281
+    second: Barlog_93
+  - first:
+      213: 8065147828413177178
+    second: Barlog_94
+  - first:
+      213: -4436607305123310804
+    second: Barlog_95
+  - first:
+      213: 2448918528710107219
+    second: Barlog_96
+  - first:
+      213: -6694806203543555233
+    second: Barlog_97
+  - first:
+      213: 2174806334281848854
+    second: Barlog_98
+  - first:
+      213: 8672162492496795843
+    second: Barlog_99
+  - first:
+      213: -4779450071305967240
+    second: Barlog_100
+  - first:
+      213: -7220323408678196272
+    second: Barlog_101
+  - first:
+      213: -5489332660930241987
+    second: Barlog_102
+  - first:
+      213: 1240233348890932463
+    second: Barlog_103
+  - first:
+      213: 5512909030886759907
+    second: Barlog_104
+  - first:
+      213: 3349395786287916394
+    second: Barlog_105
+  - first:
+      213: 4837734683275155532
+    second: Barlog_106
+  - first:
+      213: -1664256120036016989
+    second: Barlog_107
+  - first:
+      213: -4810722372790375732
+    second: Barlog_108
+  - first:
+      213: 7319892032437229922
+    second: Barlog_109
+  - first:
+      213: -3381196822251216128
+    second: Barlog_110
+  - first:
+      213: -3270563852238419899
+    second: Barlog_111
+  - first:
+      213: -3297937663315691135
+    second: Barlog_112
+  - first:
+      213: -812300165612683883
+    second: Barlog_113
+  - first:
+      213: -6694009190063783431
+    second: Barlog_114
+  - first:
+      213: -1053615997588880282
+    second: Barlog_115
+  - first:
+      213: -2490804227238356063
+    second: Barlog_116
+  - first:
+      213: 1909578891891632064
+    second: Barlog_117
+  - first:
+      213: -8001084582184936405
+    second: Barlog_118
+  - first:
+      213: -950699051118903739
+    second: Barlog_119
+  - first:
+      213: -6338099476517167236
+    second: Barlog_120
+  - first:
+      213: -8475607085204285084
+    second: Barlog_121
+  - first:
+      213: 7639328381688202937
+    second: Barlog_122
+  - first:
+      213: 6290571204630647460
+    second: Barlog_123
+  - first:
+      213: -3736539583274121843
+    second: Barlog_124
+  - first:
+      213: -7596638060146937830
+    second: Barlog_125
+  - first:
+      213: 1659404885993181811
+    second: Barlog_126
+  - first:
+      213: 224627830997304387
+    second: Barlog_127
+  - first:
+      213: -3665639671820947026
+    second: Barlog_10
+  - first:
+      213: -6646437436542610601
+    second: Barlog_12
+  - first:
+      213: 6701634235689388782
+    second: Barlog_17
+  - first:
+      213: 3238185337561130371
+    second: Barlog_128
+  - first:
+      213: -3722103487948234689
+    second: Barlog_129
+  - first:
+      213: 9056183332078370976
+    second: Barlog_130
+  - first:
+      213: -6157328929298261299
+    second: Barlog_131
+  - first:
+      213: -624402634948617957
+    second: Barlog_132
+  - first:
+      213: -4797298763263773417
+    second: Barlog_133
+  - first:
+      213: -5566330059251236379
+    second: Barlog_134
+  - first:
+      213: -9064509670144674278
+    second: Barlog_135
+  - first:
+      213: -2106052663303122029
+    second: Barlog_136
+  - first:
+      213: 8454075033044526777
+    second: Barlog_137
+  - first:
+      213: -6298837682445737370
+    second: Barlog_138
+  - first:
+      213: -7948348239916627395
+    second: Barlog_139
+  - first:
+      213: 1926342906850027402
+    second: Barlog_140
+  - first:
+      213: 8258835159358688831
+    second: Barlog_141
+  - first:
+      213: 7932382769741881402
+    second: Barlog_142
+  - first:
+      213: 1744237422184712566
+    second: Barlog_143
+  - first:
+      213: -6765345271218741017
+    second: Barlog_144
+  - first:
+      213: 1304452645489873796
+    second: Barlog_145
+  - first:
+      213: -5441922843539502351
+    second: Barlog_146
+  - first:
+      213: 1266673617567573423
+    second: Barlog_147
+  - first:
+      213: 8298620584959869130
+    second: Barlog_148
+  - first:
+      213: 8888002672240792992
+    second: Barlog_49
+  - first:
+      213: 489951056442755570
+    second: Barlog_51
+  - first:
+      213: -8597675602721702942
+    second: Barlog_53
+  - first:
+      213: 6770096540143535297
+    second: Barlog_54
+  - first:
+      213: 1876664195142903774
+    second: Barlog_55
+  - first:
+      213: -1521352885959347955
+    second: Barlog_65
+  - first:
+      213: -4000654284332553426
+    second: Barlog_66
+  - first:
+      213: 4968987129472987283
+    second: Barlog_67
+  - first:
+      213: -7239245849711288638
+    second: Barlog_68
+  - first:
+      213: 7086281892684362141
+    second: Barlog_69
+  - first:
+      213: -5473194756835853767
+    second: Barlog_70
+  - first:
+      213: -7539765153096613436
+    second: Barlog_72
+  - first:
+      213: 3014507159745179531
+    second: Barlog_73
+  - first:
+      213: -7820502774704333186
+    second: Barlog_74
+  - first:
+      213: -4301743273979337032
+    second: Barlog_75
+  - first:
+      213: -3027650342560993380
+    second: Barlog_82
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Barlog_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1094
+        width: 42
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64d3056be9cdcf40800000000000000
+      internalID: 5750474312071238764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1094
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf30a98f14c8a6180800000000000000
+      internalID: -9121323880313912325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1094
+        width: 43
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21d12f56ab4e95b0800000000000000
+      internalID: -5359763328591605459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1094
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318431b1078056290800000000000000
+      internalID: -7897897093940688877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_5
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1094
+        width: 43
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8eb53d36c1495280800000000000000
+      internalID: -9054133256165409139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_6
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1094
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011c5d82dd8989940800000000000000
+      internalID: 5303156636869050640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_7
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1094
+        width: 43
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38da66819632c500800000000000000
+      internalID: 414954114324813883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_8
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1094
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10a181a10d29da00800000000000000
+      internalID: 781705495353335835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_9
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1094
+        width: 41
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727799517cbdca7d0800000000000000
+      internalID: -2905706011453458649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_11
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1094
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4878ddf3adacb26e0800000000000000
+      internalID: -1861170982264404092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_13
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1094
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d001a6bce23062e70800000000000000
+      internalID: 9089956397410029581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_14
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1094
+        width: 44
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2eb1402d5334530800000000000000
+      internalID: 3837970483578135204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_16
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 974
+        width: 56
+        height: 86
+      alignment: 9
+      pivot: {x: 0.5470543, y: 0.58042943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8d7b43e56abff90800000000000000
+      internalID: -6918753478983034663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_18
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 974
+        width: 116
+        height: 80
+      alignment: 9
+      pivot: {x: 0.450038, y: 0.6014229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e353004c0ed3420800000000000000
+      internalID: 2611490491366456958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_19
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 974
+        width: 67
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5628617, y: 0.53785825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608b38ce105d54fd0800000000000000
+      internalID: -2358244625618847738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_20
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 974
+        width: 55
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d2ab93feed6a3c0800000000000000
+      internalID: -4348543271132582510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_21
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 862
+        width: 67
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5730172, y: 0.5530314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27626204789849650800000000000000
+      internalID: 6238762597804811890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_22
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 862
+        width: 87
+        height: 85
+      alignment: 9
+      pivot: {x: 0.5812238, y: 0.5319745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5c859dda29f4480800000000000000
+      internalID: -8912743862169451093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_23
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 862
+        width: 67
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5914416, y: 0.5344834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd24b73fb65f50170800000000000000
+      internalID: 8144185345164657371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_24
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 862
+        width: 50
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5565527, y: 0.55514914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f64a9ea172fabdc0800000000000000
+      internalID: -3622316380191570187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_25
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 862
+        width: 44
+        height: 93
+      alignment: 9
+      pivot: {x: 0.56149846, y: 0.5581921}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7d646408e40fb90800000000000000
+      internalID: -7210176690578335781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_26
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 734
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ed5727a926cc830800000000000000
+      internalID: 4092754576857751154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_27
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 734
+        width: 65
+        height: 66
+      alignment: 9
+      pivot: {x: 0.33350548, y: 0.55902934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bce1faf7fabfeef0800000000000000
+      internalID: -76637094412161865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_28
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 734
+        width: 45
+        height: 65
+      alignment: 9
+      pivot: {x: 0.49038017, y: 0.53995734}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf5ed9d4f769d120800000000000000
+      internalID: 2439094974522744755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_29
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 734
+        width: 42
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5927611, y: 0.5439152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb32960939e95070800000000000000
+      internalID: 8095758236307831755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_30
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 734
+        width: 79
+        height: 74
+      alignment: 9
+      pivot: {x: 0.37396973, y: 0.55264777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4665db2bb2f5453e0800000000000000
+      internalID: -2065921687769229724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_31
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 734
+        width: 42
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5389615, y: 0.5326087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a451315f88117a0800000000000000
+      internalID: -6408190208602977787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_32
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 734
+        width: 69
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5697884, y: 0.46362033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2d3b179447a2480800000000000000
+      internalID: -8923191852892171601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_33
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 734
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f42661d130fa880800000000000000
+      internalID: -8597649740162511089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_34
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 734
+        width: 42
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25f00f8714c0c310800000000000000
+      internalID: 1423353087711573293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_35
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 734
+        width: 66
+        height: 66
+      alignment: 9
+      pivot: {x: 0.3877545, y: 0.5392863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d360d2cfa6919d0800000000000000
+      internalID: -2803091661741736640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_36
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 734
+        width: 42
+        height: 69
+      alignment: 9
+      pivot: {x: 0.56173706, y: 0.53221065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240663fe2b996df50800000000000000
+      internalID: 6905876072415780930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_37
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 734
+        width: 53
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5768801, y: 0.5490256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b810166893cb3d70800000000000000
+      internalID: 9024021337681696947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_38
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 734
+        width: 58
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5830246, y: 0.53411704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7529fe697f87e8c10800000000000000
+      internalID: 2057715084539433559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_39
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 734
+        width: 85
+        height: 75
+      alignment: 9
+      pivot: {x: 0.44770724, y: 0.5395109}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048235d32e2f2e030800000000000000
+      internalID: 3522644912062539840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_40
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 734
+        width: 42
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5851484, y: 0.55182946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82169d39de755a160800000000000000
+      internalID: 7036126670735630632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 725
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d851bb6254b27a480800000000000000
+      internalID: -8888087763589851763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_43
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 623
+        width: 55
+        height: 83
+      alignment: 9
+      pivot: {x: 0.25715366, y: 0.6255986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58668102b4f83bf0800000000000000
+      internalID: -344256326126901154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_44
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 626
+        width: 68
+        height: 78
+      alignment: 9
+      pivot: {x: 0.27962652, y: 0.6294728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5fa42308fa8de00800000000000000
+      internalID: 1069797876634940871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_45
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 623
+        width: 47
+        height: 83
+      alignment: 9
+      pivot: {x: 0.3544435, y: 0.6295232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1348e2a0c099b1500800000000000000
+      internalID: 368056071550305329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_46
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 623
+        width: 52
+        height: 85
+      alignment: 9
+      pivot: {x: 0.458911, y: 0.6149091}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba824023e626db10800000000000000
+      internalID: 2005833440980798131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_47
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 623
+        width: 52
+        height: 85
+      alignment: 9
+      pivot: {x: 0.46845537, y: 0.6019998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbb7fa36a0f11fe0800000000000000
+      internalID: -1219929427296142380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_48
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 630
+        width: 47
+        height: 75
+      alignment: 9
+      pivot: {x: 0.39530134, y: 0.6062264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd1ade835509a800800000000000000
+      internalID: 624035879804607986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_50
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 625
+        width: 59
+        height: 78
+      alignment: 9
+      pivot: {x: 0.37794003, y: 0.6166241}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ea95bcbfa9f4850800000000000000
+      internalID: 6363475204736921100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_56
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 498
+        width: 53
+        height: 90
+      alignment: 9
+      pivot: {x: 0.6269387, y: 0.5629503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552abb9525e8f23c0800000000000000
+      internalID: -4382127428064271787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_57
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 498
+        width: 59
+        height: 89
+      alignment: 9
+      pivot: {x: 0.6140297, y: 0.5437643}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fc3eabf09522720800000000000000
+      internalID: 2819914240782225177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_58
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 498
+        width: 59
+        height: 93
+      alignment: 9
+      pivot: {x: 0.4159789, y: 0.58376384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d4abeac3b63a8a0800000000000000
+      internalID: -6295069945760166633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_59
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 498
+        width: 46
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5307916, y: 0.5678049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6a8b1a20a71bab0800000000000000
+      internalID: -4994076360055413029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_60
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 498
+        width: 51
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5763735, y: 0.599464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc65618a642fcab0800000000000000
+      internalID: -4985726222619808557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_61
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 498
+        width: 70
+        height: 96
+      alignment: 9
+      pivot: {x: 0.545527, y: 0.5627041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67e145b46f3ca3f0800000000000000
+      internalID: -888265324728555665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_62
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 498
+        width: 70
+        height: 92
+      alignment: 9
+      pivot: {x: 0.525293, y: 0.5692789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80259aa1cf3effc0800000000000000
+      internalID: -3459257362750824305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_63
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 498
+        width: 76
+        height: 112
+      alignment: 9
+      pivot: {x: 0.56988764, y: 0.45890045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73c0a7911fef7e00800000000000000
+      internalID: 1044816497410622330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_64
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 498
+        width: 70
+        height: 92
+      alignment: 9
+      pivot: {x: 0.53541, y: 0.59237206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2041543529e4b4510800000000000000
+      internalID: 1534406488419013634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_71
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 498
+        width: 116
+        height: 80
+      alignment: 9
+      pivot: {x: 0.45421246, y: 0.5752449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca57a682a8d52390800000000000000
+      internalID: -7843624983440434486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_77
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 374
+        width: 43
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.54140806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403b3fc07b9ec8420800000000000000
+      internalID: 2633736854510482180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_78
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 374
+        width: 63
+        height: 73
+      alignment: 9
+      pivot: {x: 0.56536114, y: 0.55640775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf53d48786f7fdec0800000000000000
+      internalID: -3539970695418268165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_79
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 377
+        width: 63
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5470644, y: 0.56852007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1ab77fd55712b50800000000000000
+      internalID: 6566658778127376823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_80
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 376
+        width: 38
+        height: 81
+      alignment: 9
+      pivot: {x: 0.46606526, y: 0.6082583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18608197224e4aa40800000000000000
+      internalID: 5378674691698853505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_81
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 371
+        width: 53
+        height: 93
+      alignment: 9
+      pivot: {x: 0.3674944, y: 0.61811155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d57558414b1fbb0800000000000000
+      internalID: -4903940519000318698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_85
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 374
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcd16b949b3c6ff0800000000000000
+      internalID: -41592787105096461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_86
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 254
+        width: 189
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31aa9a2696fa2fcb0800000000000000
+      internalID: -4831606583053407725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_87
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 256
+        width: 43
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35896876, y: 0.6124076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96bd15274d1f3490800000000000000
+      internalID: -7764455041160857956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_88
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 256
+        width: 45
+        height: 81
+      alignment: 9
+      pivot: {x: 0.3445038, y: 0.59790564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e514c0cfff6a520800000000000000
+      internalID: 2713137283539754582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_89
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 256
+        width: 45
+        height: 75
+      alignment: 9
+      pivot: {x: 0.3859697, y: 0.63061726}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44761c199bacbfa0800000000000000
+      internalID: -5783559147360979891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_90
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 253
+        width: 42
+        height: 99
+      alignment: 9
+      pivot: {x: 0.47778648, y: 0.5989525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99968890d359c68e0800000000000000
+      internalID: -1698818870040041063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_91
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 254
+        width: 46
+        height: 92
+      alignment: 9
+      pivot: {x: 0.48591614, y: 0.58450717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45b4ccb031425be0800000000000000
+      internalID: -1490056849124969140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_92
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 253
+        width: 44
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4893986, y: 0.59718543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec22d647b08f9550800000000000000
+      internalID: 6169791539176418542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_93
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 256
+        width: 48
+        height: 66
+      alignment: 9
+      pivot: {x: 0.4921576, y: 0.5171116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141a15475318f4110800000000000000
+      internalID: 1247357688389673281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_95
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 260
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.504152, y: 0.5789054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23d83289210e62c0800000000000000
+      internalID: -4436607305123310804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_96
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 263
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48856142, y: 0.8100869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35063ab4d6e4cf120800000000000000
+      internalID: 2448918528710107219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_97
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 248
+        width: 67
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5177931, y: 0.85874885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5374bd7a354713a0800000000000000
+      internalID: -6694806203543555233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_98
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 256
+        width: 41
+        height: 65
+      alignment: 9
+      pivot: {x: 0.49441007, y: 0.51307094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6189322a6d67e2e10800000000000000
+      internalID: 2174806334281848854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_99
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 255
+        width: 49
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8dcbff6d5b95870800000000000000
+      internalID: 8672162492496795843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_101
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 127
+        width: 41
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5202332, y: 0.6036965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db6c4e5d124ccb90800000000000000
+      internalID: -7220323408678196272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_102
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 139
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a9d435709f1d3b0800000000000000
+      internalID: -5489332660930241987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_103
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 111
+        width: 69
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4bc37e8a1363110800000000000000
+      internalID: 1240233348890932463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_104
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 117
+        width: 70
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed5c011e89c18c40800000000000000
+      internalID: 5512909030886759907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_105
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 139
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65a1e5c8b17b7e20800000000000000
+      internalID: 3349395786287916394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_106
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 124
+        width: 39
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48d3322016132340800000000000000
+      internalID: 4837734683275155532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_107
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 124
+        width: 58
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5, y: 0.56733835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acbbfd50ef57e8e0800000000000000
+      internalID: -1664256120036016989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_109
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 122
+        width: 43
+        height: 99
+      alignment: 9
+      pivot: {x: 0.4686847, y: 0.5725497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26912a3650b759560800000000000000
+      internalID: 7319892032437229922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548881c218f9c92d0800000000000000
+      internalID: -3270563852238419899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_112
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 6
+        width: 43
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189bfae1b2f5b32d0800000000000000
+      internalID: -3297937663315691135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_113
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 6
+        width: 42
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d3aa99d412ab4f0800000000000000
+      internalID: -812300165612683883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_114
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 6
+        width: 43
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f14c07ab1a1a13a0800000000000000
+      internalID: -6694009190063783431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_115
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 6
+        width: 42
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664cb0e15ddc061f0800000000000000
+      internalID: -1053615997588880282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_116
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 6
+        width: 42
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab9a6e80c2ee6dd0800000000000000
+      internalID: -2490804227238356063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_117
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 6
+        width: 43
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7e8c182ef208a10800000000000000
+      internalID: 1909578891891632064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_119
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 6
+        width: 72
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54eb1c100407ec2f0800000000000000
+      internalID: -950699051118903739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_120
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 6
+        width: 72
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fda175b1c8a08a0800000000000000
+      internalID: -6338099476517167236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_121
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 6
+        width: 72
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4695d9ef248906a80800000000000000
+      internalID: -8475607085204285084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_122
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1094
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6c51130b8540a60800000000000000
+      internalID: 7639328381688202937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_123
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1094
+        width: 37
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a29f468e299c4750800000000000000
+      internalID: 6290571204630647460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_124
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1095
+        width: 41
+        height: 89
+      alignment: 9
+      pivot: {x: 0.3489633, y: 0.6522025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8582c9cb05252cc0800000000000000
+      internalID: -3736539583274121843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_125
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1103
+        width: 37
+        height: 81
+      alignment: 9
+      pivot: {x: 0.40585738, y: 0.6337876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10bab9dee1539690800000000000000
+      internalID: -7596638060146937830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_126
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1108
+        width: 36
+        height: 75
+      alignment: 9
+      pivot: {x: 0.49335733, y: 0.6052116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372db20b3f3670710800000000000000
+      internalID: 1659404885993181811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_127
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1101
+        width: 37
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344c24972d90e1300800000000000000
+      internalID: 224627830997304387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_10
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1094
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1788ec328012dc0800000000000000
+      internalID: -3665639671820947026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 974
+        width: 50
+        height: 93
+      alignment: 9
+      pivot: {x: 0.41430795, y: 0.5956861}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7531505ad5c13c3a0800000000000000
+      internalID: -6646437436542610601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 975
+        width: 71
+        height: 91
+      alignment: 9
+      pivot: {x: 0.30039194, y: 0.5905453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaccd0a4dcf00d50800000000000000
+      internalID: 6701634235689388782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_128
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 974
+        width: 51
+        height: 93
+      alignment: 9
+      pivot: {x: 0.42249793, y: 0.5708336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385a53a686850fc20800000000000000
+      internalID: 3238185337561130371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_129
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 974
+        width: 68
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5726574, y: 0.57726145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f306a97299e685cc0800000000000000
+      internalID: -3722103487948234689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_130
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 974
+        width: 87
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0485142c60ead70800000000000000
+      internalID: 9056183332078370976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_131
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 974
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.57929814, y: 0.5744995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcad0f336f5cc8aa0800000000000000
+      internalID: -6157328929298261299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_132
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 974
+        width: 56
+        height: 86
+      alignment: 9
+      pivot: {x: 0.5355072, y: 0.5886316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19d11b9c1da557f0800000000000000
+      internalID: -624402634948617957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_133
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 974
+        width: 55
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5602561, y: 0.58192015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715fd3621329c6db0800000000000000
+      internalID: -4797298763263773417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_134
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 974
+        width: 67
+        height: 89
+      alignment: 9
+      pivot: {x: 0.60095304, y: 0.55428493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e140c38d4c60c2b0800000000000000
+      internalID: -5566330059251236379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_135
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 862
+        width: 55
+        height: 93
+      alignment: 9
+      pivot: {x: 0.51591575, y: 0.5627481}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16fee71b74643280800000000000000
+      internalID: -9064509670144674278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_136
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 862
+        width: 44
+        height: 92
+      alignment: 9
+      pivot: {x: 0.59647715, y: 0.5674379}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3935d85d24cc5c2e0800000000000000
+      internalID: -2106052663303122029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_137
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 863
+        width: 50
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5700049, y: 0.56021875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b62e117378e25570800000000000000
+      internalID: 8454075033044526777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_138
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 862
+        width: 68
+        height: 90
+      alignment: 9
+      pivot: {x: 0.5744696, y: 0.5519375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6622aff10880698a0800000000000000
+      internalID: -6298837682445737370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_139
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 862
+        width: 88
+        height: 88
+      alignment: 9
+      pivot: {x: 0.6324192, y: 0.53611475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a0ba0536bc1b190800000000000000
+      internalID: -7948348239916627395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_140
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 862
+        width: 67
+        height: 90
+      alignment: 9
+      pivot: {x: 0.58959734, y: 0.5235413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87a366eaaebbba10800000000000000
+      internalID: 1926342906850027402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_141
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 862
+        width: 65
+        height: 80
+      alignment: 9
+      pivot: {x: 0.46197206, y: 0.54413986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ec41cf1d64d9270800000000000000
+      internalID: 8258835159358688831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_142
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 862
+        width: 71
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5397878, y: 0.5240763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30e4ecf91c751e60800000000000000
+      internalID: 7932382769741881402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_143
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 862
+        width: 65
+        height: 80
+      alignment: 9
+      pivot: {x: 0.45110697, y: 0.57062376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6794341b1b6c43810800000000000000
+      internalID: 1744237422184712566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_144
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 734
+        width: 53
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e06326f15aac12a0800000000000000
+      internalID: -6765345271218741017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_145
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 623
+        width: 48
+        height: 84
+      alignment: 9
+      pivot: {x: 0.38462338, y: 0.61634684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4831eb015c85a1210800000000000000
+      internalID: 1304452645489873796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_146
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 628
+        width: 46
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5057201, y: 0.5944394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa8ebf91086a74b0800000000000000
+      internalID: -5441922843539502351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_147
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 635
+        width: 63
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5488078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5697da1f0249110800000000000000
+      internalID: 1266673617567573423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_148
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 628
+        width: 46
+        height: 78
+      alignment: 9
+      pivot: {x: 0.51018757, y: 0.58411586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0074c347f9a2370800000000000000
+      internalID: 8298620584959869130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_49
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 367
+        width: 41
+        height: 92
+      alignment: 9
+      pivot: {x: 0.38677308, y: 0.6149385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a592a9f657885b70800000000000000
+      internalID: 8888002672240792992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_51
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 372
+        width: 55
+        height: 98
+      alignment: 9
+      pivot: {x: 0.34868386, y: 0.593708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f90994d3e7acc600800000000000000
+      internalID: 489951056442755570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_53
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 372
+        width: 55
+        height: 96
+      alignment: 9
+      pivot: {x: 0.38057086, y: 0.60100526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebfabd779beea880800000000000000
+      internalID: -8597675602721702942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_54
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 372
+        width: 55
+        height: 92
+      alignment: 9
+      pivot: {x: 0.40900657, y: 0.60539675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c44b5a0fe634fd50800000000000000
+      internalID: 6770096540143535297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_55
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 250
+        width: 69
+        height: 38
+      alignment: 9
+      pivot: {x: 0.49698892, y: 0.8773089}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7ef2a74204b0a10800000000000000
+      internalID: 1876664195142903774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_65
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 256
+        width: 41
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01b0665c9113eae0800000000000000
+      internalID: -1521352885959347955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_66
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 256
+        width: 53
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5203063, y: 0.57255536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ba631ff12da78c0800000000000000
+      internalID: -4000654284332553426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_67
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 256
+        width: 36
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390b9b9a77365f440800000000000000
+      internalID: 4968987129472987283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_68
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 124
+        width: 74
+        height: 107
+      alignment: 9
+      pivot: {x: 0.49999917, y: 0.5753148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cedc3e3148098b90800000000000000
+      internalID: -7239245849711288638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_69
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 162
+        width: 48
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91fbbf26d7875260800000000000000
+      internalID: 7086281892684362141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_70
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 117
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ab44ced5e4b04b0800000000000000
+      internalID: -5473194756835853767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_72
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 124
+        width: 78
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49371728, y: 0.5680699}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1cec76a8f5d5790800000000000000
+      internalID: -7539765153096613436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_73
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 123
+        width: 57
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5000011, y: 0.56067955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fab7d4a4ea5d920800000000000000
+      internalID: 3014507159745179531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_74
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 124
+        width: 40
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e9ac4492ef77390800000000000000
+      internalID: -7820502774704333186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_75
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 124
+        width: 78
+        height: 107
+      alignment: 9
+      pivot: {x: 0.5082405, y: 0.5600727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6298fa8432d44c0800000000000000
+      internalID: -4301743273979337032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barlog_82
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 33
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fef8bfd00abf5d0800000000000000
+      internalID: -3027650342560993380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

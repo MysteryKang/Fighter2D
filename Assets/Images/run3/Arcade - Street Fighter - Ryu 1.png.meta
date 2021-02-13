@@ -1,0 +1,2005 @@
+fileFormatVersion: 2
+guid: b20afcaff0f984d18b7d1e2b1df8f307
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5764346741828036770
+    second: Arcade - Street Fighter - Ryu 1_0
+  - first:
+      213: -398709585602963036
+    second: Arcade - Street Fighter - Ryu 1_1
+  - first:
+      213: 5029659284274064758
+    second: Arcade - Street Fighter - Ryu 1_2
+  - first:
+      213: -6174288302641927366
+    second: Arcade - Street Fighter - Ryu 1_3
+  - first:
+      213: -5098267665940847990
+    second: Arcade - Street Fighter - Ryu 1_4
+  - first:
+      213: -7900615038367296988
+    second: Arcade - Street Fighter - Ryu 1_5
+  - first:
+      213: -4192036866996571951
+    second: Arcade - Street Fighter - Ryu 1_6
+  - first:
+      213: -2864877078801183968
+    second: Arcade - Street Fighter - Ryu 1_7
+  - first:
+      213: -9138561108782968834
+    second: Arcade - Street Fighter - Ryu 1_8
+  - first:
+      213: 7944810296222051545
+    second: Arcade - Street Fighter - Ryu 1_9
+  - first:
+      213: 6156989101263530551
+    second: Arcade - Street Fighter - Ryu 1_10
+  - first:
+      213: 7618346086429462090
+    second: Arcade - Street Fighter - Ryu 1_11
+  - first:
+      213: -1950400536802036338
+    second: Arcade - Street Fighter - Ryu 1_12
+  - first:
+      213: -3521788446597237399
+    second: Arcade - Street Fighter - Ryu 1_13
+  - first:
+      213: -3284687448225400224
+    second: Arcade - Street Fighter - Ryu 1_14
+  - first:
+      213: 5911876353890498901
+    second: Arcade - Street Fighter - Ryu 1_15
+  - first:
+      213: -8776892592628720263
+    second: Arcade - Street Fighter - Ryu 1_16
+  - first:
+      213: 3652287862787178957
+    second: Arcade - Street Fighter - Ryu 1_17
+  - first:
+      213: 7617063965319775260
+    second: Arcade - Street Fighter - Ryu 1_18
+  - first:
+      213: 7681701177440658310
+    second: Arcade - Street Fighter - Ryu 1_19
+  - first:
+      213: 5376679386720302379
+    second: Arcade - Street Fighter - Ryu 1_20
+  - first:
+      213: 1396541918527018216
+    second: Arcade - Street Fighter - Ryu 1_21
+  - first:
+      213: -3175572672975790491
+    second: Arcade - Street Fighter - Ryu 1_22
+  - first:
+      213: -5072167498148960200
+    second: Arcade - Street Fighter - Ryu 1_23
+  - first:
+      213: 2626759787579147306
+    second: Arcade - Street Fighter - Ryu 1_24
+  - first:
+      213: -4254868959240570374
+    second: Arcade - Street Fighter - Ryu 1_25
+  - first:
+      213: -1960073087160491590
+    second: Arcade - Street Fighter - Ryu 1_26
+  - first:
+      213: 7998892980935628645
+    second: Arcade - Street Fighter - Ryu 1_27
+  - first:
+      213: 8195398094614878919
+    second: Arcade - Street Fighter - Ryu 1_28
+  - first:
+      213: -5733363848405144884
+    second: Arcade - Street Fighter - Ryu 1_29
+  - first:
+      213: 8585123735046716035
+    second: Arcade - Street Fighter - Ryu 1_30
+  - first:
+      213: 9100586283973072597
+    second: Arcade - Street Fighter - Ryu 1_31
+  - first:
+      213: 8270194755570665813
+    second: Arcade - Street Fighter - Ryu 1_32
+  - first:
+      213: 7491550698267028712
+    second: Arcade - Street Fighter - Ryu 1_33
+  - first:
+      213: -5215850895877883832
+    second: Arcade - Street Fighter - Ryu 1_34
+  - first:
+      213: 3803576157173436377
+    second: Arcade - Street Fighter - Ryu 1_35
+  - first:
+      213: -6336067533172781949
+    second: Arcade - Street Fighter - Ryu 1_36
+  - first:
+      213: 421141648748909038
+    second: Arcade - Street Fighter - Ryu 1_37
+  - first:
+      213: 9088256238737572798
+    second: Arcade - Street Fighter - Ryu 1_38
+  - first:
+      213: -7441950481162385409
+    second: Arcade - Street Fighter - Ryu 1_39
+  - first:
+      213: 266631413312174822
+    second: Arcade - Street Fighter - Ryu 1_40
+  - first:
+      213: -8523576860969816895
+    second: Arcade - Street Fighter - Ryu 1_41
+  - first:
+      213: 7665979076696093872
+    second: Arcade - Street Fighter - Ryu 1_42
+  - first:
+      213: -5899560345346938996
+    second: Arcade - Street Fighter - Ryu 1_43
+  - first:
+      213: 5085110987364945898
+    second: Arcade - Street Fighter - Ryu 1_44
+  - first:
+      213: 3206449488492013737
+    second: Arcade - Street Fighter - Ryu 1_45
+  - first:
+      213: -5723149959209245816
+    second: Arcade - Street Fighter - Ryu 1_46
+  - first:
+      213: 4832642276487926718
+    second: Arcade - Street Fighter - Ryu 1_47
+  - first:
+      213: -2862686165408852429
+    second: Arcade - Street Fighter - Ryu 1_48
+  - first:
+      213: 1258227724777525716
+    second: Arcade - Street Fighter - Ryu 1_49
+  - first:
+      213: 7579366213142281143
+    second: Arcade - Street Fighter - Ryu 1_50
+  - first:
+      213: 4351110682762418509
+    second: Arcade - Street Fighter - Ryu 1_51
+  - first:
+      213: -488317418062204444
+    second: Arcade - Street Fighter - Ryu 1_52
+  - first:
+      213: 1756412518695367852
+    second: Arcade - Street Fighter - Ryu 1_53
+  - first:
+      213: 2378466210053838971
+    second: Arcade - Street Fighter - Ryu 1_54
+  - first:
+      213: -8939600837415182691
+    second: Arcade - Street Fighter - Ryu 1_55
+  - first:
+      213: 4544696779526801216
+    second: Arcade - Street Fighter - Ryu 1_56
+  - first:
+      213: 1158554439994554600
+    second: Arcade - Street Fighter - Ryu 1_57
+  - first:
+      213: 3082550748329214142
+    second: Arcade - Street Fighter - Ryu 1_58
+  - first:
+      213: 8635251687036385111
+    second: Arcade - Street Fighter - Ryu 1_59
+  - first:
+      213: -4366985272966029125
+    second: Arcade - Street Fighter - Ryu 1_60
+  - first:
+      213: 7841051501039709217
+    second: Arcade - Street Fighter - Ryu 1_61
+  - first:
+      213: 4253568502432654207
+    second: Arcade - Street Fighter - Ryu 1_62
+  - first:
+      213: 47905872913966101
+    second: Arcade - Street Fighter - Ryu 1_63
+  - first:
+      213: 4617552418619462370
+    second: Arcade - Street Fighter - Ryu 1_64
+  - first:
+      213: 5338769513583922699
+    second: Arcade - Street Fighter - Ryu 1_65
+  - first:
+      213: -3266671894175334188
+    second: Arcade - Street Fighter - Ryu 1_66
+  - first:
+      213: 5140076977807900470
+    second: Arcade - Street Fighter - Ryu 1_67
+  - first:
+      213: 3071046529235460171
+    second: Arcade - Street Fighter - Ryu 1_68
+  - first:
+      213: 6391488169061024869
+    second: Arcade - Street Fighter - Ryu 1_69
+  - first:
+      213: 7378294842864322781
+    second: Arcade - Street Fighter - Ryu 1_70
+  - first:
+      213: -5743684152131793465
+    second: Arcade - Street Fighter - Ryu 1_71
+  - first:
+      213: -8898818914698688883
+    second: Arcade - Street Fighter - Ryu 1_72
+  - first:
+      213: 3317364573754148968
+    second: Arcade - Street Fighter - Ryu 1_73
+  - first:
+      213: -6686340594982506069
+    second: Arcade - Street Fighter - Ryu 1_74
+  - first:
+      213: -1046660770817993417
+    second: Arcade - Street Fighter - Ryu 1_75
+  - first:
+      213: -3019319382764218851
+    second: Arcade - Street Fighter - Ryu 1_76
+  - first:
+      213: 4061033535614105081
+    second: Arcade - Street Fighter - Ryu 1_77
+  - first:
+      213: 7670283051782358957
+    second: Arcade - Street Fighter - Ryu 1_78
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1096
+        width: 45
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a827d422d21fff40800000000000000
+      internalID: 5764346741828036770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1097
+        width: 42
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9979d8ebf777af0800000000000000
+      internalID: -398709585602963036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1096
+        width: 44
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67da6648870fcc540800000000000000
+      internalID: 5029659284274064758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1096
+        width: 35
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bad246085805aa0800000000000000
+      internalID: -6174288302641927366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1096
+        width: 42
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a826cb1d1905f39b0800000000000000
+      internalID: -5098267665940847990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1096
+        width: 47
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422120b5b706b5290800000000000000
+      internalID: -7900615038367296988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1096
+        width: 45
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0f3590ea4e2d5c0800000000000000
+      internalID: -4192036866996571951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1096
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b85e0c979ed38d0800000000000000
+      internalID: -2864877078801183968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_8
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1096
+        width: 51
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff8ac8f61f4d2180800000000000000
+      internalID: -9138561108782968834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 993
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc6e2afed2a14e60800000000000000
+      internalID: 7944810296222051545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 993
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aa3ca67f4027550800000000000000
+      internalID: 6156989101263530551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 993
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e8d91e66dc9b960800000000000000
+      internalID: 7618346086429462090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 992
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85fe22ab09cee4e0800000000000000
+      internalID: -1950400536802036338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_13
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 993
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9653f7a2118102fc0800000000000000
+      internalID: -3521788446597237399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 992
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a375a3b227a62d0800000000000000
+      internalID: -3284687448225400224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 993
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559bcada8343b0250800000000000000
+      internalID: 5911876353890498901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_16
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 993
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d9b9060b6323680800000000000000
+      internalID: -8776892592628720263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_17
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 993
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc186e6e5788fa230800000000000000
+      internalID: 3652287862787178957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_18
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 993
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14405cc15f35b960800000000000000
+      internalID: 7617063965319775260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 904
+        width: 44
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683ec008582ea9a60800000000000000
+      internalID: 7681701177440658310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 904
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25f0a45a6dcd9a40800000000000000
+      internalID: 5376679386720302379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_21
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 904
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4deb7c973816310800000000000000
+      internalID: 1396541918527018216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_22
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 904
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e17d49a791ee3d0800000000000000
+      internalID: -3175572672975790491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_23
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 904
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838ac8fa88a0c99b0800000000000000
+      internalID: -5072167498148960200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 904
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a248fe01c10247420800000000000000
+      internalID: 2626759787579147306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_25
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 904
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af931ae893ba3f4c0800000000000000
+      internalID: -4254868959240570374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_26
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 904
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1eef189eb6cc4e0800000000000000
+      internalID: -1960073087160491590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_27
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 800
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567980549c6c10f60800000000000000
+      internalID: 7998892980935628645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 800
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cade6e5527ebb170800000000000000
+      internalID: 8195398094614878919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_29
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 800
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccaaebfd4fffe60b0800000000000000
+      internalID: -5733363848405144884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_30
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 800
+        width: 53
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38afb341d8c742770800000000000000
+      internalID: 8585123735046716035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_31
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 800
+        width: 46
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6d1002207cb4e70800000000000000
+      internalID: 9100586283973072597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_32
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 800
+        width: 55
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55986151052a5c270800000000000000
+      internalID: 8270194755570665813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_33
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 800
+        width: 48
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec290b0ba557f760800000000000000
+      internalID: 7491550698267028712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_34
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 696
+        width: 89
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848bbc5be339d97b0800000000000000
+      internalID: -5215850895877883832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_35
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 696
+        width: 87
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfc77cdc5409c430800000000000000
+      internalID: 3803576157173436377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_36
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 696
+        width: 51
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cc9540624c118a0800000000000000
+      internalID: -6336067533172781949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_37
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 696
+        width: 47
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee11dc5291238d500800000000000000
+      internalID: 421141648748909038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 696
+        width: 59
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb34ea1c5e8ff1e70800000000000000
+      internalID: 9088256238737572798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_39
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 696
+        width: 39
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7c44e6771e8b890800000000000000
+      internalID: -7441950481162385409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_40
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 696
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eabe649bd343b300800000000000000
+      internalID: 266631413312174822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_41
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 624
+        width: 84
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cca72a310c26b980800000000000000
+      internalID: -8523576860969816895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_42
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 624
+        width: 35
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b43c0aaa57036a60800000000000000
+      internalID: 7665979076696093872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_43
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 624
+        width: 87
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c876d948f1d802ea0800000000000000
+      internalID: -5899560345346938996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_44
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 625
+        width: 77
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefc25d3081f19640800000000000000
+      internalID: 5085110987364945898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_45
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 625
+        width: 72
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8accf32d89f7c20800000000000000
+      internalID: 3206449488492013737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_46
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 625
+        width: 68
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883aa054f694390b0800000000000000
+      internalID: -5723149959209245816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_47
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 496
+        width: 61
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb31998cb8ef01340800000000000000
+      internalID: 4832642276487926718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_48
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 496
+        width: 24
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33651678912b548d0800000000000000
+      internalID: -2862686165408852429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_49
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 496
+        width: 46
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d199e5037f167110800000000000000
+      internalID: 1258227724777525716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_50
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 496
+        width: 83
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb71f4e9615f2960800000000000000
+      internalID: 7579366213142281143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_51
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 496
+        width: 63
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d491670ec10426c30800000000000000
+      internalID: 4351110682762418509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_52
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 496
+        width: 58
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e134ce35e52939f0800000000000000
+      internalID: -488317418062204444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_53
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 496
+        width: 48
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4f2ef31e7006810800000000000000
+      internalID: 1756412518695367852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_54
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 497
+        width: 38
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7857889a62020120800000000000000
+      internalID: 2378466210053838971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_55
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 400
+        width: 62
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e5514076820f380800000000000000
+      internalID: -8939600837415182691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_56
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 400
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0478e8364a1021f30800000000000000
+      internalID: 4544696779526801216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_57
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 400
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8b3d8ff13041010800000000000000
+      internalID: 1158554439994554600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_58
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 400
+        width: 52
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb00744d29b67ca20800000000000000
+      internalID: 3082550748329214142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_59
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 400
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75775e768a396d770800000000000000
+      internalID: 8635251687036385111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_60
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 400
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb06f71180a5563c0800000000000000
+      internalID: -4366985272966029125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_61
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 296
+        width: 75
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce309ebc201dc60800000000000000
+      internalID: 7841051501039709217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_62
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 296
+        width: 86
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73e94f3406b70b30800000000000000
+      internalID: 4253568502432654207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 296
+        width: 55
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51421b933223aa000800000000000000
+      internalID: 47905872913966101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_64
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 297
+        width: 62
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e21f8bb577d41040800000000000000
+      internalID: 4617552418619462370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_65
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 296
+        width: 49
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ecada269e171a40800000000000000
+      internalID: 5338769513583922699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_66
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 296
+        width: 51
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d04de548337aa2d0800000000000000
+      internalID: -3266671894175334188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_67
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 296
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f376c27c8355740800000000000000
+      internalID: 5140076977807900470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_68
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 176
+        width: 44
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40a6c71c8c8e9a20800000000000000
+      internalID: 3071046529235460171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_69
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 44
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5648efe40a023b850800000000000000
+      internalID: 6391488169061024869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_70
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 176
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd846055118f46660800000000000000
+      internalID: 7378294842864322781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_72
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 176
+        width: 100
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d868bd4585b018480800000000000000
+      internalID: -8898818914698688883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868c411f085a90e20800000000000000
+      internalID: 3317364573754148968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_74
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 8
+        width: 92
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba13bc497a85533a0800000000000000
+      internalID: -6686340594982506069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_75
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 8
+        width: 94
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7359e0b03938971f0800000000000000
+      internalID: -1046660770817993417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_76
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 8
+        width: 92
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1613e6b4093916d0800000000000000
+      internalID: -3019319382764218851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_77
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 8
+        width: 101
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f53a3ffb70bb5830800000000000000
+      internalID: 4061033535614105081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Street Fighter - Ryu 1_78
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 104
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7cf24fbc1527a60800000000000000
+      internalID: 7670283051782358957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
