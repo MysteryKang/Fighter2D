@@ -45,7 +45,7 @@ public class FightingCombo : MonoBehaviour
     ComboInput input;
 
     CharacterController2D controller;
-    //Player myself;
+    Player2 myself;
 
     //float sec = 0;
 
@@ -55,11 +55,9 @@ public class FightingCombo : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController2D>();
-      //  myself = GetComponent<Player>();
+        myself = GetComponent<Player2>();
         PrimeCombos();
-       
-       
-       
+ 
     }
 
 
@@ -71,11 +69,10 @@ public class FightingCombo : MonoBehaviour
             // add listener to those composed combos
             c.onInputted.AddListener(() =>
             {
-                // call attack function with the attack
-                //skip = true;
+                // call attack function with the attack              
                 Attack(c.comboAttack);
                 ResetCombos();
-                skip = true;
+               
             });
         }
     }
@@ -86,31 +83,16 @@ public class FightingCombo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //input = null;
-        //lastInput = input;
-        //if (startCountingTime)
-        //{
-        //    leeway += Time.deltaTime;
-        //    if (leeway >= comboLeeway)
-        //    {
-        //        startCountingTime = false;
-        //        leeway = 0;
-        //        ResetCombos();
-        //    }
-        //}
-        //else
-        //{
-        //    leeway = 0;
-        //}
-
         if (curAttack != null)
         {
-            if (timer >= 0)
+            if (timer > 0)
                 timer -= Time.deltaTime;
-            else
+            else 
                 curAttack = null;
+            
             return;
         }
+
         if (currentCombos.Count > 0)
         {
             leeway += Time.deltaTime;
@@ -120,6 +102,7 @@ public class FightingCombo : MonoBehaviour
             }
         }
         else {
+            
             leeway = 0;
         }
 
@@ -151,34 +134,32 @@ public class FightingCombo : MonoBehaviour
         {
             input = new ComboInput(AttackType.light);
             punchButton.GetComponent<Button>().clicked = false;
+            Debug.Log("punch");
         }
         if (kickButton.GetComponent<Button>().clicked)
         {
             input = new ComboInput(AttackType.kick);
             kickButton.GetComponent<Button>().clicked = false;
+            Debug.Log("kick");
         }
         if (specialButton.GetComponent<Button>().clicked)
         {
             input = new ComboInput(AttackType.special);
-            specialButton.GetComponent<Button>().clicked = false;          
+            specialButton.GetComponent<Button>().clicked = false;
+            Debug.Log("special");
         }
         if (input == null) return;
 
-        //lastInput = input;
-
-        //// skip one frame
-        //if (skip)
-        //{
-        //    skip = false;
-        //    return;
-        //}
 
         List<int> remove = new List<int>();
         for (int i = 0; i < currentCombos.Count; i++)
         {
             Combo c = combos[currentCombos[i]];
             if (c.continueCombo(input))
+            {
+                Debug.Log("remove list " + input.type);
                 leeway = 0;
+            }
             else
                 remove.Add(i);
         }
@@ -188,6 +169,7 @@ public class FightingCombo : MonoBehaviour
             if (currentCombos.Contains(i)) continue;
             if (combos[i].continueCombo(input))
             {
+                Debug.Log("current combolist " + input.type);
                 currentCombos.Add(i);
                 leeway = 0;
             }
@@ -195,49 +177,22 @@ public class FightingCombo : MonoBehaviour
 
         foreach (int i in remove)
         {
-            currentCombos.RemoveAt(i);
+            // Debug.Log("remove list " + i);          
+            if (currentCombos.Contains(i))
+            {
+                currentCombos.RemoveAt(i);
+            }
         }
 
-        //if (input != null)
+        //foreach (int i in currentCombos)
         //{
-
-
-        //    List<int> remove = new List<int>();
-        //    for (int i = 0; i < currentCombos.Count; i++)
-        //    {
-        //        Combo c = combos[currentCombos[i]];
-        //        if (c.continueCombo(input))
-        //            leeway = 0;
-        //        else
-        //            remove.Add(i);
-        //    }
-
-        //    for (int i = 0; i < combos.Count; i++)
-        //    {
-        //        if (currentCombos.Contains(i)) continue;
-        //        if (combos[i].continueCombo(input))
-        //        {
-        //            currentCombos.Add(i);
-        //            leeway = 0;
-        //        }
-        //    }
-
-
-        //    //  remove items from the currentCombo list
-        //    foreach (int i in remove)
-        //    {
-        //        Debug.Log("remove count is " + remove.Count);
-        //        Debug.Log("current combo count is " + currentCombos.Count);
-        //        currentCombos.RemoveAt(i);
-        //    }
+        //    Debug.Log("current conmbo " + i);
         //}
-        //input = null;
 
-        //if (currentCombos.Count <= 0) // 
-        //{
-        //    Debug.Log("current combos count == 0");
-        //    //  Attack(getAttackFromType(input.type));
-        //}
+        if (currentCombos.Count <= 0) // 
+        {
+            remove.Clear();
+        }
 
     }
 
@@ -263,28 +218,16 @@ public class FightingCombo : MonoBehaviour
         return null;
     }
 
-    //void SingleAttack(Attack att)
-    //{
-    //    if (controller.m_Grounded && curAttack == null)
-    //    {
-    //        //  timer = att.length;
-    //        Debug.Log("lightattack");
-    //        ani.SetTrigger(att.name);
-    //    }
-    //}
-
     void Attack(Attack att)
     {
-        if (controller.m_Grounded)
+        if (controller.m_Grounded && curAttack == null)
         {
             curAttack = att;
             timer = att.length;
             ani.Play(att.name, -1, 0);
         }
         else
-        {
             return;
-        }
     }
 }
 

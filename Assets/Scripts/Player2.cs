@@ -122,6 +122,8 @@ public class Player2 : MonoBehaviour
         }
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -146,15 +148,7 @@ public class Player2 : MonoBehaviour
             return;
         }
 
-        if (Mathf.Abs(horizontal) > 0 && controller.m_Grounded)
-        {
-            animator.SetFloat("xVelocity", horizontal);
-            animator.SetBool("isMoving", true);
-        }
-        else {
-            animator.SetBool("isMoving", false);
-        }
-
+       
         if (Mathf.Abs(horizontal) > 0)
         {
             animator.SetBool("isMoving", true);
@@ -168,29 +162,7 @@ public class Player2 : MonoBehaviour
 
 
         animator.speed = animationSpeed;
-        // this needs to be optimized
-        //if (!attacking || !isBeingAttacked)
-        //{
-        //    horizontal = Input.GetAxisRaw("Horizontal") * speed;
-        //}
-        //else if (attacking)
-        //{
-        //    if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") || isBeingAttacked)
-        //    {
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        horizontal = 0f;
-        //    }
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !jump && !attacking && !isBeingAttacked)
-        //{
-        //  //  jump = true;
-        //} 
-
-        //animator.SetBool("isGrounded", controller.m_Grounded);
+       
 
         //------- determine whether it is moving horizontally or not
         if (Mathf.Abs(horizontal) > 0)
@@ -204,21 +176,6 @@ public class Player2 : MonoBehaviour
         // ---------
 
 
-       // ------airborne punch or airborne kick
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle_Jump_Up") ||
-            animator.GetCurrentAnimatorStateInfo(0).IsName("Idle_Jump_Down") ||
-            animator.GetCurrentAnimatorStateInfo(0).IsName("Rolling_Jump"))
-        {
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                AirbornePunch();
-            }
-            else if (Input.GetKeyDown(KeyCode.K))
-            {
-                AirborneKick();
-            }
-        }
-
         if (combo.curAttack != null)
         {
             animator.ResetTrigger("LightPunch");
@@ -226,36 +183,12 @@ public class Player2 : MonoBehaviour
             animator.ResetTrigger("Hadoken");
         }
 
-        // if the player is not getting attacked, start accepting inputs
-        //if (!isBeingAttacked)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.J) && controller.m_Grounded)
-        //    {
-        //        LightPunch();
-        //    }
-        //    if (Input.GetKeyDown(KeyCode.K) && controller.m_Grounded)
-        //    {
-        //        Kick();
-        //    }
-
-        //    if (canSpawnHadoken)
-        //    {
-        //        if (Input.GetKeyDown(KeyCode.I) && controller.m_Grounded)
-        //        {
-        //            Hadoken();
-        //        }
-        //    }
-
-        //    if (Input.GetKeyDown(KeyCode.U) && controller.m_Grounded && !animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut"))
-        //    {
-        //        UpperCut();
-        //    }
-
-        //    if (Input.GetKeyDown(KeyCode.H) && !animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") && controller.m_Grounded)
-        //    {
-        //        SpinningKick();
-        //    }
-        //}
+        if (controller.m_Grounded) {
+            isUpperCutting = false;
+            animator.ResetTrigger("AirbornePunch");
+            animator.ResetTrigger("AirborneKick");
+        }
+      
 
         //// if any of {LightPunch, Hadoken, Kick}'s  animation is Playing stop moving horizontally
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("LightPunch") || animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken")
@@ -270,21 +203,6 @@ public class Player2 : MonoBehaviour
             attacking = false;
         }
 
-        //// UpperCutting
-        //if (animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut"))
-        //{
-        //    if (isUpperCutting == true)
-        //    {
-        //        horizontal = 0f;
-        //    }
-        //    else
-        //    {
-        //        horizontal *= 0.3f;
-        //    }
-        //}
-
-
-
 
         animator.SetBool("isGrounded", controller.m_Grounded);
         animator.SetFloat("yVelocity", GetComponent<Rigidbody2D>().velocity.y);
@@ -298,6 +216,7 @@ public class Player2 : MonoBehaviour
         float direction = controller.m_FacingRight == true ? 1f : -1f;
         rd.AddForce(new Vector2(10f * direction, 0f));
     }
+
     // ------------------------------------------
 
     private void FixedUpdate()
@@ -338,9 +257,10 @@ public class Player2 : MonoBehaviour
             animator.SetTrigger("LightPunch");
         }
         else {
-            AirbornePunch();
-        }
-        
+            if (!isUpperCutting)
+                AirbornePunch();
+            else return;
+        } 
     }
     #endregion
 
@@ -353,7 +273,9 @@ public class Player2 : MonoBehaviour
         }
         else
         {
-            AirborneKick();
+            if (!isUpperCutting)
+                AirborneKick();
+            else return;
         }
     }
     #endregion
@@ -426,33 +348,7 @@ public class Player2 : MonoBehaviour
         else return;
     }
 
-    //private void Kick()
-    //{
-    //    if (combo.curAttack == null)
-    //    {
-    //        attacking = true;
-    //        animator.SetTrigger("Kick");
-    //        Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
-    //        if (enemy != null)
-    //        {
-    //            if (enemy.GetComponent<HealthSystem>().isInvincible)
-    //                return;
-    //            else
-    //            {
-    //                enemy.GetComponent<HealthSystem>().TakeHits(damage);
-    //                PushBackward(enemy.GetComponent<Rigidbody2D>());
-    //                float direction = controller.m_FacingRight == true ? 1f : -1f;
-    //                enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
-    //                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-    //                this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
-    //            }
-    //        }
-    //        else return;
-    //    }
-
-    //}
-
-
+   
     #region   UpperCut
 
     private void UpperCut()
@@ -466,7 +362,7 @@ public class Player2 : MonoBehaviour
     // ------- trigger at animation event
     public void UpperCutJump()
     {
-        isUpperCutting = false;
+        isUpperCutting = true;
         controller.m_AirControl = false;
         horizontal = controller.m_FacingRight ? 2f : -2f;
         Vector2 force = upperCutForce;
