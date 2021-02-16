@@ -89,7 +89,6 @@ public class FightingCombo : MonoBehaviour
                 timer -= Time.deltaTime;
             else 
                 curAttack = null;
-            
             return;
         }
 
@@ -134,19 +133,16 @@ public class FightingCombo : MonoBehaviour
         {
             input = new ComboInput(AttackType.light);
             punchButton.GetComponent<Button>().clicked = false;
-            Debug.Log("punch");
         }
         if (kickButton.GetComponent<Button>().clicked)
         {
             input = new ComboInput(AttackType.kick);
             kickButton.GetComponent<Button>().clicked = false;
-            Debug.Log("kick");
         }
         if (specialButton.GetComponent<Button>().clicked)
         {
             input = new ComboInput(AttackType.special);
             specialButton.GetComponent<Button>().clicked = false;
-            Debug.Log("special");
         }
         if (input == null) return;
 
@@ -157,11 +153,16 @@ public class FightingCombo : MonoBehaviour
             Combo c = combos[currentCombos[i]];
             if (c.continueCombo(input))
             {
-                Debug.Log("remove list " + input.type);
+               // Debug.Log("remove list " + input.type);
                 leeway = 0;
             }
             else
+            {
+                Debug.Log(i);
+                Debug.Log(currentCombos[i]);
                 remove.Add(i);
+            }
+                
         }
 
         for (int i = 0; i < combos.Count; i++)
@@ -169,25 +170,19 @@ public class FightingCombo : MonoBehaviour
             if (currentCombos.Contains(i)) continue;
             if (combos[i].continueCombo(input))
             {
-                Debug.Log("current combolist " + input.type);
+              //  Debug.Log("current combolist " + input.type);
                 currentCombos.Add(i);
                 leeway = 0;
             }
         }
 
         foreach (int i in remove)
-        {
-            // Debug.Log("remove list " + i);          
+        {          
             if (currentCombos.Contains(i))
             {
                 currentCombos.RemoveAt(i);
             }
         }
-
-        //foreach (int i in currentCombos)
-        //{
-        //    Debug.Log("current conmbo " + i);
-        //}
 
         if (currentCombos.Count <= 0) // 
         {
@@ -220,7 +215,7 @@ public class FightingCombo : MonoBehaviour
 
     void Attack(Attack att)
     {
-        if (controller.m_Grounded && curAttack == null)
+        if (controller.m_Grounded)
         {
             curAttack = att;
             timer = att.length;
