@@ -4,15 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LeftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
+public class LeftButton : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
     public Player2 player;
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        player.horizontal = -1f;
-        player.isLeftDirectionButtonClicked = true;
-    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -25,12 +19,5 @@ public class LeftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         player.horizontal = 0f;
         player.isLeftDirectionButtonClicked = false;
     }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        player.horizontal = 0f;
-        player.isLeftDirectionButtonClicked = false;
-    }
-
 
 }

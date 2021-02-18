@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,6 +56,10 @@ public class Player : MonoBehaviour
 
     public float spinningKickHorizontalSpeed;
 
+    private bool shouldGetup = true;
+
+    private bool isAlive = true;
+
     [SerializeField] private float force;
     // Start is called before the first frame update
     void Start()
@@ -85,10 +90,21 @@ public class Player : MonoBehaviour
     void Update()
     {
         animator.speed = animationSpeed;
+
+        // check if the player/myself is alive
+        if (GetComponent<HealthSystem>().health <= 0)
+            isAlive = false;
+        else
+            isAlive = true;
+
+        //-------------------------
+
         // this needs to be optimized
         if ((!attacking && currentState != PlayerState.IsBeingAttacked) || combo.curAttack != null)
         {
-            horizontal = Input.GetAxisRaw("Horizontal") * speed;
+            if (isAlive)
+                horizontal = Input.GetAxisRaw("Horizontal") * speed;
+
             if (horizontal == 0)
             {
                 animator.SetBool("isMoving", false);
@@ -96,9 +112,8 @@ public class Player : MonoBehaviour
             else {
                 animator.SetBool("isMoving", true);
             }
-
         }
-        else if(attacking){
+        if(attacking){
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpinningKick") || isBeingAttacked)
             {
                 return;
@@ -107,9 +122,17 @@ public class Player : MonoBehaviour
                 horizontal = 0f;
             }
         }
-        
-        
-        if (Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !attacking && !isBeingAttacked)
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakenDown") && !controller.m_Grounded)
+        {
+            horizontal = controller.m_FacingRight ? -0.5f : 0.5f;
+        }
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakenDown") && controller.m_Grounded)
+        {
+            horizontal = 0f;
+        }
+
+        if (isAlive && Input.GetKeyDown(KeyCode.Space) && controller.m_Grounded && !attacking && !isBeingAttacked)
         {
             jump = true;
             animator.SetTrigger("Jump");
@@ -127,6 +150,11 @@ public class Player : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.K)) {
                 AirborneKick();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            animator.Play("Combo2", -1, 0);
         }
 
         // if the player is not getting attacked, start accepting inputs
@@ -168,14 +196,6 @@ public class Player : MonoBehaviour
     
         // UpperCutting
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("UpperCut")) {
-            //if (isUpperCutting == true)
-            //{
-            //    horizontal = 0f;
-            //}
-            //else
-            //{
-            //    horizontal *= 0.3f;
-            //}
             horizontal *= 0.3f;
         }
 
@@ -217,7 +237,6 @@ public class Player : MonoBehaviour
             return;
         }
         else {
-            // animator.SetTrigger("Hadoken");
             animator.Play("Hadoken", -1, 0);
         }
     }
@@ -251,11 +270,10 @@ public class Player : MonoBehaviour
     // used in simple attack
     public void DetectEnemyAndGiveDamage()
     {
-        Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
-        if (enemy != null)
+        Collider2D en = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
+        if (en != null)
         {
-            //Transform enemy = enem.transform.parent;
-            //Debug.Log(enemy.gameObject.name);
+            Transform enemy = en.transform.parent;
             if (enemy.GetComponent<HealthSystem>() == null)
             {
                 Debug.Log("this enemy does not contain healthsystem");
@@ -267,6 +285,7 @@ public class Player : MonoBehaviour
                 else
                 {
                     enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                    enemy.GetComponent<Animator>().Play("TakeHit2");
                     PushBackward(enemy.GetComponent<Rigidbody2D>());
                     float direction = controller.m_FacingRight == true ? 1f : -1f;
                     //enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
@@ -290,6 +309,7 @@ public class Player : MonoBehaviour
             else
             {
                 enemy.GetComponent<HealthSystem>().TakeHits(damage);
+                
                 PushBackward(enemy.GetComponent<Rigidbody2D>());
                 float direction = controller.m_FacingRight == true ? 1f : -1f;
                 enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
@@ -374,7 +394,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
 
     public void ResetGravity()
     {
@@ -466,11 +485,7 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, radius);
 
     }
-
-
 }
-
-
 
 
 //// player's different status  TO be used later !!

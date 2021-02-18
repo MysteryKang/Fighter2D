@@ -70,9 +70,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.083333336
-    functionName: LightAttack
+    functionName: AirbornePunchAttack
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 756167c3896a947789172250b0b791e7, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: 23cb84a663f7c4678a3c1faec4046ed5, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

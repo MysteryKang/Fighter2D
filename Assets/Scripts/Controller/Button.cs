@@ -13,7 +13,10 @@ public class Button : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         clicked = true;
-        input.Invoke();
+        if (player.isAlive)
+            input.Invoke();
+        else
+            return;
     }
 
     public void OnPointerUp(PointerEventData eventData)

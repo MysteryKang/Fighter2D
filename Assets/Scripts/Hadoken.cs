@@ -28,6 +28,7 @@ public class Hadoken : MonoBehaviour
     {
         if (collision.gameObject.layer == 10 && collision.gameObject.name != self) {
             collision.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
+            collision.gameObject.GetComponent<Animator>().Play("TakeHit2", -1, 0);
             Transform enemy = collision.gameObject.transform;
             enemy.localScale = new Vector3(Mathf.Abs(enemy.localScale.x) * -direction, enemy.localScale.y, 1f);
             enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
@@ -35,14 +36,14 @@ public class Hadoken : MonoBehaviour
             Destroy(this.gameObject);
         }
      
-        if (collision.transform.parent != null && collision.gameObject.name != self) {
+        if (collision.transform.parent.name == "Player" && collision.gameObject.name != self) {
             Transform parent = collision.transform.parent;
             parent.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
+            parent.gameObject.GetComponent<Animator>().Play("TakeHit2", -1, 0);
             parent.localScale = new Vector3(Mathf.Abs(parent.localScale.x) * -direction, parent.localScale.y, 1f);
             parent.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
             Player2.canSpawnHadoken = true;
             Destroy(this.gameObject);
-
         }
     }
 

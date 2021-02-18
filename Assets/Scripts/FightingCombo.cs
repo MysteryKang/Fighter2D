@@ -153,16 +153,12 @@ public class FightingCombo : MonoBehaviour
             Combo c = combos[currentCombos[i]];
             if (c.continueCombo(input))
             {
-               // Debug.Log("remove list " + input.type);
                 leeway = 0;
             }
             else
             {
-                Debug.Log(i);
-                Debug.Log(currentCombos[i]);
                 remove.Add(i);
-            }
-                
+            }   
         }
 
         for (int i = 0; i < combos.Count; i++)

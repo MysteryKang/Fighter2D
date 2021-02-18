@@ -4,16 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RightButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
+public class RightButton : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
     public Player2 player;
-
- 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        player.horizontal = 1f;
-        player.isRightDirectionButtonClicked = true;
-    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -26,12 +19,5 @@ public class RightButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         player.horizontal = 0f;
         player.isRightDirectionButtonClicked = false;
     }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        player.horizontal = 0f;
-        player.isRightDirectionButtonClicked = false;
-    }
-
 
 }

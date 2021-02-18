@@ -9,6 +9,10 @@ public class GameManger : MonoBehaviour
     public static bool isGameOver;
     public GameObject controller;
     public GameObject menu;
+    private float timeTillShowMenu = 2f;
+
+    public Player player1;
+    public Player2 player2;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +25,28 @@ public class GameManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGameOver) {
-            controller.SetActive(false);
-            menu.SetActive(true);
+        if (IsGameOver()) {
+            Time.timeScale = 0.2f;
+            if (timeTillShowMenu > 0)
+            {
+                timeTillShowMenu -= Time.deltaTime;
+            }
+            else {
+                Time.timeScale = 1f;
+                controller.SetActive(false);
+                menu.SetActive(true);
+            }
         }
-        Time.timeScale = timeScale;
-      
+    }
+
+    private bool IsGameOver() {
+        if (player1.GetComponent<HealthSystem>().health <= 0
+            || player2.GetComponent<HealthSystem>().health <= 0)
+        {
+            return true;
+        }
+        else
+            return false;
     }
 
     public void StartGame() {

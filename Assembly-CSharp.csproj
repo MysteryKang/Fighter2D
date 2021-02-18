@@ -68,10 +68,14 @@
     <Compile Include="Assets/Scripts/GameManger.cs" />
     <Compile Include="Assets/Scripts/TestScript.cs" />
     <Compile Include="Assets/Scripts/Controller/RightButton.cs" />
+    <Compile Include="Assets/Scripts/WallForce.cs" />
     <Compile Include="Assets/Scripts/Controller/JumpButton.cs" />
     <Compile Include="Assets/Scripts/Controller/SpecialButton.cs" />
     <Compile Include="Assets/Scripts/Hadoken.cs" />
     <Compile Include="Assets/Scripts/Controller/Button.cs" />
+    <Compile Include="Assets/Scripts/Particle.cs" />
+    <Compile Include="Assets/Scripts/BasicMovement.cs" />
+    <Compile Include="Assets/Scripts/Character.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

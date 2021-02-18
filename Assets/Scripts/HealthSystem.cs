@@ -34,7 +34,6 @@ public class HealthSystem : MonoBehaviour
             GetComponent<Player2>().currentState = PlayerState.Idle;
             GetComponent<Player2>().horizontal = 0f;
         }
- 
     }
 
     public void TakeHits(float damage) {
@@ -53,13 +52,13 @@ public class HealthSystem : MonoBehaviour
             if (health <= 0)
             {
                 healthBar.value = 0f;
-                // play death animation
+                animator.SetTrigger("Dead");
                 this.enabled = false;
             }
             if (health > 0)
             {
                 // play taking hits animation
-                animator.Play("TakeHit", -1, 0);
+              //  animator.Play("TakeHit2", -1, 0);
                 healthBar.value = health / maxHealth;
                 if (health <= 30)
                 {
@@ -80,10 +79,11 @@ public class HealthSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(health <= 0f)
+        if (health <= 0f)
         {
+            Debug.Log("GameOver");
             GameManger.isGameOver = true;
         }
     }
