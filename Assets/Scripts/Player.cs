@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public CharacterController2D controller;
-    // animator
+    
     public Animator animator;
-    FightingCombo combo;
+    TestScript combo;
 
    // public Character ryu;
 
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        combo = GetComponent<FightingCombo>();
+        combo = GetComponent<TestScript>();
         //SetUpCharacter();
     }
 

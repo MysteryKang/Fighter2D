@@ -120,6 +120,7 @@ public class Player2 : MonoBehaviour
         hdk.GetComponent<Hadoken>().direction = transform.localScale.x / Mathf.Abs(transform.localScale.x);
         hdk.gameObject.name = "hadoken";
         hdk.GetComponent<SpriteRenderer>().sortingLayerName = "Hadoken";
+        hdk.GetComponent<Hadoken>().hitEffect = hitEffect;
         canSpawnHadoken = false;
     }
 
@@ -336,6 +337,7 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
+                    AudioManager.PlayHitSound();
                     float direction = controller.m_FacingRight ? 1f : -1f;
                     InteractionWith(enemy, "TakeHit2", direction);
                     PushAwayEachOhter(enemy, force, direction);
@@ -390,6 +392,7 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
+                    AudioManager.PlayHitSound();
                     InteractionWith(enemy.transform, "TakeHit", direction);
      
                 }
@@ -400,6 +403,7 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
+                    AudioManager.PlayHitSound();
                     InteractionWith(en, "TakeHit", direction);
                    
                 }
@@ -484,6 +488,7 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
+                    AudioManager.PlayHitSound();
                     en.GetComponent<HealthSystem>().TakeHits(damage);
                     ShowHitEffect(en.transform.position);
                     en.GetComponent<Animator>().Play(animation, -1, 0);
@@ -508,6 +513,7 @@ public class Player2 : MonoBehaviour
             else
             {
                 en.GetComponent<HealthSystem>().TakeHits(damage);
+                AudioManager.PlayHitSound();
                 if (hittingId == 0)
                 {
                     ShowHitEffect(en.GetComponent<Player>().point1.position);
@@ -579,6 +585,7 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
+                    AudioManager.PlayHitSound();
                     en.GetComponent<HealthSystem>().TakeHits(damage);
                     ShowHitEffect(en.transform.position);
                     en.GetComponent<Animator>().SetTrigger("TakenDown");

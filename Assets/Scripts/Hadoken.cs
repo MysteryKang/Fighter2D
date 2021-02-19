@@ -14,6 +14,7 @@ public class Hadoken : MonoBehaviour
     public string self;
     public bool canSpawnHadoken = true;
 
+    public GameObject hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,9 @@ public class Hadoken : MonoBehaviour
     {
         if (collision.gameObject.layer == 10 && collision.gameObject.name != self) {
             collision.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
+            ShowHitEffect(collision.transform);
             collision.gameObject.GetComponent<Animator>().Play("TakeHit2", -1, 0);
+            AudioManager.PlayHitSound(); //  hit sound
             Transform enemy = collision.gameObject.transform;
             enemy.localScale = new Vector3(Mathf.Abs(enemy.localScale.x) * -direction, enemy.localScale.y, 1f);
             enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
@@ -38,7 +41,9 @@ public class Hadoken : MonoBehaviour
      
         if (collision.transform.parent.name == "Player" && collision.gameObject.name != self) {
             Transform parent = collision.transform.parent;
+            ShowHitEffect(parent);
             parent.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
+            AudioManager.PlayHitSound(); // hit sound
             parent.gameObject.GetComponent<Animator>().Play("TakeHit2", -1, 0);
             parent.localScale = new Vector3(Mathf.Abs(parent.localScale.x) * -direction, parent.localScale.y, 1f);
             parent.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
@@ -47,6 +52,12 @@ public class Hadoken : MonoBehaviour
         }
     }
 
+    private void ShowHitEffect(Transform tras)
+    {
+        GameObject effect = Instantiate(hitEffect);
+        effect.transform.position = tras.position;
+        effect.gameObject.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {

@@ -16,6 +16,7 @@
 		<type fullname="UnityEditor.Physics2DSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.QualitySettings" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody2D" preserve="nothing"/>
@@ -47,8 +48,10 @@
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="AudioManager" preserve="nothing"/>
 		<type fullname="Button" preserve="nothing"/>
 		<type fullname="CharacterController2D" preserve="nothing"/>
 		<type fullname="Disappear" preserve="nothing"/>
@@ -60,6 +63,7 @@
 		<type fullname="Player" preserve="nothing"/>
 		<type fullname="Player2" preserve="nothing"/>
 		<type fullname="RightButton" preserve="nothing"/>
+		<type fullname="TestScript" preserve="nothing"/>
 		<type fullname="WallForce" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
