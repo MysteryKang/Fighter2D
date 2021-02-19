@@ -10,7 +10,6 @@ public class Character : ScriptableObject
     public new string name;
     public Sprite sprite;
     public string sortingLayer;
-    public UnityEditor.Animations.AnimatorController controller;
-
+  //  public UnityEditor.Animations.AnimatorController controller;
 
 }

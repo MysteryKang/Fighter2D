@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +10,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     FightingCombo combo;
 
-    public Character ryu;
+   // public Character ryu;
 
     //  the player's state
     public PlayerState currentState;
@@ -75,11 +74,11 @@ public class Player : MonoBehaviour
         //SetUpCharacter();
     }
 
-    private void SetUpCharacter() {
-        GetComponent<SpriteRenderer>().sprite = ryu.sprite;
-        GetComponent<SpriteRenderer>().sortingLayerName = ryu.sortingLayer;
-        animator.runtimeAnimatorController = ryu.controller;
-    }
+    //private void SetUpCharacter() {
+    //    GetComponent<SpriteRenderer>().sprite = ryu.sprite;
+    //    GetComponent<SpriteRenderer>().sortingLayerName = ryu.sortingLayer;
+    //    animator.runtimeAnimatorController = ryu.controller;
+    //}
 
     // --- spawning hadoken here 
     public void SpawnHadoken() {
