@@ -42,6 +42,8 @@ public class Player2 : MonoBehaviour
 
     public int comboHit = 1;
 
+    public int hittingId;
+    public Transform hittingPoint;
 
     //-----------for the purpose of drawing gismos
     [Header("Grouncheck")]
@@ -90,6 +92,11 @@ public class Player2 : MonoBehaviour
     void Start()
     {
         combo = GetComponent<FightingCombo>();
+    }
+
+    public void UpdateHittingPoint(int i)
+    {
+        hittingId = i;
     }
 
     private void ShowParticle(Vector2 position)
@@ -244,8 +251,6 @@ public class Player2 : MonoBehaviour
             attacking = false;
         }
 
-        
-
         animator.SetBool("isGrounded", controller.m_Grounded);
         animator.SetFloat("yVelocity", GetComponent<Rigidbody2D>().velocity.y);
         animator.SetFloat("xVelocity", GetComponent<Rigidbody2D>().velocity.x);
@@ -262,7 +267,7 @@ public class Player2 : MonoBehaviour
     //  ---------- hakoden animations
     public void Hadoken()
     {
-        if (canSpawnHadoken && controller.m_Grounded)
+        if (canSpawnHadoken && controller.m_Grounded && combo.curAttack == null)
         {
             attacking = true;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Hadoken"))
@@ -273,6 +278,7 @@ public class Player2 : MonoBehaviour
             {
                 // animator.SetTrigger("Hadoken");
                 animator.Play("Hadoken", -1, 0);
+                AudioManager.PlayHadoken();
             }
         }
         else 
@@ -286,6 +292,7 @@ public class Player2 : MonoBehaviour
     {
         if (controller.m_Grounded)
         {
+            AudioManager.Attack();
             animator.SetTrigger("LightPunch");
         }
         else {
@@ -301,6 +308,7 @@ public class Player2 : MonoBehaviour
     {
         if (controller.m_Grounded)
         {
+            AudioManager.Attack();
             animator.SetTrigger("Kick");
         }
         else
@@ -341,7 +349,19 @@ public class Player2 : MonoBehaviour
     private void InteractionWith(Transform tf, string animation, float direction)
     {
         tf.GetComponent<HealthSystem>().TakeHits(damage);
-        ShowHitEffect(tf.position);
+        if (hittingId == 0)
+        {
+            ShowHitEffect(tf.GetComponent<Player>().point1.position);
+        }
+        else if (hittingId == 1)
+        {
+            ShowHitEffect(tf.GetComponent<Player>().point2.position);
+        }
+        else
+        {
+            ShowHitEffect(tf.GetComponent<Player>().point3.position);
+        }
+       // ShowHitEffect(tf.position);
         tf.GetComponent<Animator>().Play(animation, -1, 0);
         PushBackEnemy(tf.GetComponent<Rigidbody2D>());
         tf.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, tf.transform.localScale.y, 1f);
@@ -358,6 +378,7 @@ public class Player2 : MonoBehaviour
 
     public void ComboTheEnemy()
     {
+        UpdateHittingPoint(1);
         Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
         if (enemy != null)
         {
@@ -476,7 +497,8 @@ public class Player2 : MonoBehaviour
 
 
     #region AirborneAttack
-    private void AirborneAttack(Vector2 position, float direction) {
+    private void AirborneAttackInfo(Vector2 position, float direction) {
+        UpdateHittingPoint(0);
         Collider2D enemy = Physics2D.OverlapCircle(position, attackRange, enemyLayers);
         if (enemy != null && enemy.transform.parent != null)
         {
@@ -486,7 +508,19 @@ public class Player2 : MonoBehaviour
             else
             {
                 en.GetComponent<HealthSystem>().TakeHits(damage);
-                ShowHitEffect(en.transform.position);
+                if (hittingId == 0)
+                {
+                    ShowHitEffect(en.GetComponent<Player>().point1.position);
+                }
+                else if (hittingId == 1)
+                {
+                    ShowHitEffect(en.GetComponent<Player>().point2.position);
+                }
+                else
+                {
+                    ShowHitEffect(en.GetComponent<Player>().point3.position);
+                }
+                //ShowHitEffect(en.transform.position);
                 en.GetComponent<Animator>().Play("TakeHit", -1, 0);
                 en.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
                 en.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
@@ -495,16 +529,21 @@ public class Player2 : MonoBehaviour
         else
             return;
     }
-
-    public void AirbornePunchAttack() {
+ 
+    private void AirbornePunch()
+    {
+        animator.SetTrigger("AirbornePunch");
+    }
+    private void AirborneKick()
+    {
+        animator.SetTrigger("AirborneKick");
+    }
+  
+    public void AirborneAttack() {
         float direction = controller.m_FacingRight ? 1f : -1f;
-        AirborneAttack(airbornePunchPoint.position, direction);
+        AirborneAttackInfo(airbornePunchPoint.position, direction);
     }
 
-    public void AirborneKickAttack() {
-        float direction = controller.m_FacingRight ? 1f : -1f;
-        AirborneAttack(airborneKickPoint.position, direction);
-    }
     #endregion
 
     private bool IsAlive()
@@ -529,6 +568,7 @@ public class Player2 : MonoBehaviour
     // ------ heavy attack caused by upper cut ,  lift up the enemy and move  horizontally 
     public void HeavyAttack()
     {
+        UpdateHittingPoint(1);
         Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in enemyhits)
         {
@@ -552,39 +592,7 @@ public class Player2 : MonoBehaviour
         }
     }
 
-    #region Airborne Punch and Airborne Kick 
-    private void AirbornePunch()
-    {
-        animator.SetTrigger("AirbornePunch");
-    }
-    private void AirborneKick()
-    {
-        animator.SetTrigger("AirborneKick");
-    }
-    #endregion
-
-    //public void LightAttack()
-    //{
-    //    Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-    //    foreach (Collider2D en in enemyhits)
-    //    {
-    //        if (en.transform.parent != null) {
-    //            Transform enemy = en.transform.parent;
-    //            if (enemy.GetComponent<HealthSystem>().isInvincible)
-    //                return;
-    //            else
-    //            {
-    //                enemy.GetComponent<HealthSystem>().TakeHits(damage);
-    //                //enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
-    //                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
-    //                float direction = controller.m_FacingRight == true ? 1f : -1f;
-    //                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-    //            }
-    //        }
-    //    }
-    //}
-
-
+   
     // draw gismos of attackpoint and groundcheck in the  scene
     private void OnDrawGizmosSelected()
     {

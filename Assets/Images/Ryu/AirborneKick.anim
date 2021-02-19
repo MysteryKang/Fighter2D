@@ -70,7 +70,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.083333336
-    functionName: AirborneKickAttack
+    functionName: AirborneAttack
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 23cb84a663f7c4678a3c1faec4046ed5, type: 3}
     floatParameter: 0

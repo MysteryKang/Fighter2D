@@ -91,7 +91,7 @@ public class FightingCombo : MonoBehaviour
                 curAttack = null;
             return;
         }
-
+        
         if (currentCombos.Count > 0)
         {
             leeway += Time.deltaTime;

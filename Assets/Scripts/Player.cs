@@ -67,6 +67,13 @@ public class Player : MonoBehaviour
 
     public int totalHitCount = 0;
 
+
+
+    [Header("HittingPoint")]
+    public Transform point1;
+    public Transform point2;
+    public Transform point3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +81,8 @@ public class Player : MonoBehaviour
         //SetUpCharacter();
     }
 
-    //private void SetUpCharacter() {
+    //private void SetUpCharacter()
+    //{
     //    GetComponent<SpriteRenderer>().sprite = ryu.sprite;
     //    GetComponent<SpriteRenderer>().sortingLayerName = ryu.sortingLayer;
     //    animator.runtimeAnimatorController = ryu.controller;
