@@ -17,6 +17,7 @@ public class Player2 : MonoBehaviour
     FightingCombo combo;
 
     public TextMeshProUGUI comboText;
+    public int hitCount = 0;
 
     //  the player's state
     //public PlayerState currentState;
@@ -33,22 +34,36 @@ public class Player2 : MonoBehaviour
     public Transform hadokenPoint;
     public Transform airbornePunchPoint;
     public Transform airborneKickPoint;
+    //-----------------------------
+
 
     public bool isBeingAttacked = false;
+    public bool attacking = false;
 
     public int comboHit = 1;
 
+
+    //-----------for the purpose of drawing gismos
     [Header("Grouncheck")]
     public Transform groundCheck;
     public float radius;
-
-    public float speed;
+    //----------------------------------
+    
+    //public float speed;
 
    // [SerializeField] private float animationSpeed = 1f;  // for test purpose
 
+    // ------- character movement control numbers
     public float horizontal;
     bool jump = false;
-    public bool attacking = false;
+    //--------------------------------------------
+
+
+
+    //--- HitEffect Object here
+    public GameObject hitEffect;
+
+    
 
     public float hadokenRate = 0.3f;
 
@@ -64,22 +79,17 @@ public class Player2 : MonoBehaviour
 
     public bool isMoveable = false;
 
-    // inputs
-    public bool isJumping = false;
-    public bool punching = false;
-    public bool kicking = false;
-    public bool isSpecialKeyPressed = false;
-
+ 
     public GameObject particleEffect;
 
     public bool isAlive = true;
 
     [SerializeField] private float force;
+
     // Start is called before the first frame update
     void Start()
     {
         combo = GetComponent<FightingCombo>();
-        
     }
 
     private void ShowParticle(Vector2 position)
@@ -106,6 +116,7 @@ public class Player2 : MonoBehaviour
         canSpawnHadoken = false;
     }
 
+    
     public void Jumping() {
         if (controller.m_Grounded && combo.curAttack == null)
         {
@@ -115,13 +126,30 @@ public class Player2 : MonoBehaviour
         else return;
     }
 
-    // Update is called once per frame
+   
+    // when enemy gets attacked, it'll be pushed backward 
+    private void PushBackEnemy(Rigidbody2D rd)
+    {
+        float direction = controller.m_FacingRight == true ? 1f : -1f;
+        rd.AddForce(new Vector2(10f * direction, 0f));
+    }
+
+    // ------------------------------------------
+
+    private void ShowHitEffect(Vector2 position) {
+        GameObject effect = Instantiate(hitEffect);
+        effect.transform.position = position;
+        effect.gameObject.SetActive(true);
+    }
+
+     // Update is called once per frame
     void Update()
     {
         if (GetComponent<HealthSystem>().health > 0)
             isAlive = true;
         else
             isAlive = false;
+
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakeHit"))
         {
@@ -224,15 +252,6 @@ public class Player2 : MonoBehaviour
 
     }
 
-    // when enemy gets attacked, it'll be pushed backward 
-    private void PushBackward(Rigidbody2D rd)
-    {
-        float direction = controller.m_FacingRight == true ? 1f : -1f;
-        rd.AddForce(new Vector2(10f * direction, 0f));
-    }
-
-    // ------------------------------------------
-
     private void FixedUpdate()
     {
         controller.Move(horizontal, false, jump);
@@ -256,9 +275,8 @@ public class Player2 : MonoBehaviour
                 animator.Play("Hadoken", -1, 0);
             }
         }
-        else {
+        else 
             return;
-        }
     }
 
     #endregion
@@ -310,19 +328,32 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
-                    enemy.GetComponent<HealthSystem>().TakeHits(damage);
-                    ShowParticle(enemy.position);
-                    enemy.GetComponent<Animator>().Play("TakeHit2", -1, 0);
-                    PushBackward(enemy.GetComponent<Rigidbody2D>());
-                    float direction = controller.m_FacingRight == true ? 1f : -1f;
-                    enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
-                    enemy.GetComponent<CharacterController2D>().m_FacingRight = controller.m_FacingRight == true ? false : true;
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-                    this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
+                    float direction = controller.m_FacingRight ? 1f : -1f;
+                    InteractionWith(enemy, "TakeHit2", direction);
+                    PushAwayEachOhter(enemy, force, direction);
                 }
             }
         }
         else return;
+    }
+
+    //------- interaction with opponent
+    private void InteractionWith(Transform tf, string animation, float direction)
+    {
+        tf.GetComponent<HealthSystem>().TakeHits(damage);
+        ShowHitEffect(tf.position);
+        tf.GetComponent<Animator>().Play(animation, -1, 0);
+        PushBackEnemy(tf.GetComponent<Rigidbody2D>());
+        tf.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, tf.transform.localScale.y, 1f);
+        tf.GetComponent<CharacterController2D>().m_FacingRight = !controller.m_FacingRight;
+        PushAwayEachOhter(tf, force, direction);
+    }
+
+    // ----- push away each other 
+    private void PushAwayEachOhter(Transform tf, float force, float direction)
+    {
+        tf.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
     }
 
     public void ComboTheEnemy()
@@ -330,20 +361,16 @@ public class Player2 : MonoBehaviour
         Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
         if (enemy != null)
         {
+            float direction = controller.m_FacingRight ? 1f : -1f;
             if (enemy.transform.parent == null)
             {
+                
                 if (enemy.GetComponent<HealthSystem>().isInvincible)
                     return;
                 else
                 {
-                    enemy.GetComponent<HealthSystem>().TakeHits(damage);
-                    ShowParticle(enemy.transform.position);
-                    enemy.GetComponent<Animator>().Play("TakeHit2", -1, 0);
-                    PushBackward(enemy.GetComponent<Rigidbody2D>());
-                    float direction = controller.m_FacingRight == true ? 1f : -1f;
-                    enemy.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, enemy.transform.localScale.y, 1f);
-                    //enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-                    //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
+                    InteractionWith(enemy.transform, "TakeHit", direction);
+     
                 }
             }
             else {
@@ -352,13 +379,8 @@ public class Player2 : MonoBehaviour
                     return;
                 else
                 {
-                    en.GetComponent<HealthSystem>().TakeHits(damage);
-                    en.GetComponent<Animator>().Play("TakeHit2", -1, 0);
-                    PushBackward(en.GetComponent<Rigidbody2D>());
-                    float direction = controller.m_FacingRight == true ? 1f : -1f;
-                    en.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -direction, en.transform.localScale.y, 1f);
-                    //enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-                    //this.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * -direction, 0f));
+                    InteractionWith(en, "TakeHit", direction);
+                   
                 }
 
 
@@ -416,8 +438,9 @@ public class Player2 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         GetComponent<Rigidbody2D>().gravityScale = 5f;
     }
+    
 
-    //  spinning kick push the enemy both ways   * codes will be simplified later
+    //  spinning kick push the enemy both ways, this is added to the animation clip
     public void SpinningKickToEnemy()
     {
         Vector2 force = upperCutForce;
@@ -425,6 +448,7 @@ public class Player2 : MonoBehaviour
         DetectAndAttack(attackPoint.position, direction, "TakenDown", force); // front of the player
         DetectAndAttack(attackPoint_Back.position, -direction, "TakenDown", force); // back of the player
     }
+    #endregion
 
     // supporting private function for the spinning kick 
     private void DetectAndAttack(Vector2 position, float direction, string animation, Vector2 force)
@@ -440,6 +464,7 @@ public class Player2 : MonoBehaviour
                 else
                 {
                     en.GetComponent<HealthSystem>().TakeHits(damage);
+                    ShowHitEffect(en.transform.position);
                     en.GetComponent<Animator>().Play(animation, -1, 0);
                     en.GetComponent<HealthSystem>().SleepAndWakeUp();
                     en.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
@@ -449,6 +474,8 @@ public class Player2 : MonoBehaviour
         }
     }
 
+
+    #region AirborneAttack
     private void AirborneAttack(Vector2 position, float direction) {
         Collider2D enemy = Physics2D.OverlapCircle(position, attackRange, enemyLayers);
         if (enemy != null && enemy.transform.parent != null)
@@ -459,6 +486,7 @@ public class Player2 : MonoBehaviour
             else
             {
                 en.GetComponent<HealthSystem>().TakeHits(damage);
+                ShowHitEffect(en.transform.position);
                 en.GetComponent<Animator>().Play("TakeHit", -1, 0);
                 en.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
                 en.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
@@ -477,6 +505,7 @@ public class Player2 : MonoBehaviour
         float direction = controller.m_FacingRight ? 1f : -1f;
         AirborneAttack(airborneKickPoint.position, direction);
     }
+    #endregion
 
     private bool IsAlive()
     {
@@ -489,11 +518,13 @@ public class Player2 : MonoBehaviour
             return true;
     }
 
+
+    // this is used in spinning kick movement
     public void ResetGravity()
     {
         GetComponent<Rigidbody2D>().gravityScale = 5f;
     }
-    #endregion
+    
 
     // ------ heavy attack caused by upper cut ,  lift up the enemy and move  horizontally 
     public void HeavyAttack()
@@ -509,6 +540,7 @@ public class Player2 : MonoBehaviour
                 else
                 {
                     en.GetComponent<HealthSystem>().TakeHits(damage);
+                    ShowHitEffect(en.transform.position);
                     en.GetComponent<Animator>().SetTrigger("TakenDown");
                     en.GetComponent<HealthSystem>().SleepAndWakeUp();
                     en.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
@@ -531,26 +563,26 @@ public class Player2 : MonoBehaviour
     }
     #endregion
 
-    public void LightAttack()
-    {
-        Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D en in enemyhits)
-        {
-            if (en.transform.parent != null) {
-                Transform enemy = en.transform.parent;
-                if (enemy.GetComponent<HealthSystem>().isInvincible)
-                    return;
-                else
-                {
-                    enemy.GetComponent<HealthSystem>().TakeHits(damage);
-                    //enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
-                    enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
-                    float direction = controller.m_FacingRight == true ? 1f : -1f;
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
-                }
-            }
-        }
-    }
+    //public void LightAttack()
+    //{
+    //    Collider2D[] enemyhits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+    //    foreach (Collider2D en in enemyhits)
+    //    {
+    //        if (en.transform.parent != null) {
+    //            Transform enemy = en.transform.parent;
+    //            if (enemy.GetComponent<HealthSystem>().isInvincible)
+    //                return;
+    //            else
+    //            {
+    //                enemy.GetComponent<HealthSystem>().TakeHits(damage);
+    //                //enemy.GetComponent<HealthSystem>().SleepAndWakeUp();
+    //                enemy.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+    //                float direction = controller.m_FacingRight == true ? 1f : -1f;
+    //                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * direction, 0f));
+    //            }
+    //        }
+    //    }
+    //}
 
 
     // draw gismos of attackpoint and groundcheck in the  scene

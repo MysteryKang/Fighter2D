@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public Animator animator;
     FightingCombo combo;
 
+    public Character ryu;
+
     //  the player's state
     public PlayerState currentState;
 
@@ -61,10 +63,22 @@ public class Player : MonoBehaviour
     private bool isAlive = true;
 
     [SerializeField] private float force;
+    private float countingTime;
+    private float wakeUpTime;
+
+    public int totalHitCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         combo = GetComponent<FightingCombo>();
+        //SetUpCharacter();
+    }
+
+    private void SetUpCharacter() {
+        GetComponent<SpriteRenderer>().sprite = ryu.sprite;
+        GetComponent<SpriteRenderer>().sortingLayerName = ryu.sortingLayer;
+        animator.runtimeAnimatorController = ryu.controller;
     }
 
     // --- spawning hadoken here 
@@ -84,11 +98,22 @@ public class Player : MonoBehaviour
         canSpawnHadoken = false;
     }
 
-
+ 
     //-----------------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
+        if (isBeingAttacked)
+        {
+            countingTime += Time.deltaTime;
+            if (countingTime >= wakeUpTime)
+            {
+                isBeingAttacked = false;
+                countingTime = 0;
+            }
+        }
+
+
         animator.speed = animationSpeed;
 
         // check if the player/myself is alive
@@ -96,7 +121,8 @@ public class Player : MonoBehaviour
             isAlive = false;
         else
             isAlive = true;
-
+        if (!isAlive)
+            Physics2D.IgnoreLayerCollision(9, 10);
         //-------------------------
 
         // this needs to be optimized
@@ -201,6 +227,7 @@ public class Player : MonoBehaviour
 
         animator.SetBool("isGrounded", controller.m_Grounded);
         animator.SetFloat("xVelocity", GetComponent<Rigidbody2D>().velocity.x);
+        animator.SetFloat("yVelocity", GetComponent<Rigidbody2D>().velocity.y);
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("TakeHit"))
         {

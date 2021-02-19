@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 
-[CreateAssetMenu(fileName = "Data", menuName = "Charaters", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "Character", order = 1)]
 public class Character : ScriptableObject
 {
     public new string name;
     public Sprite sprite;
-    public int sortingLayer;
+    public string sortingLayer;
     public UnityEditor.Animations.AnimatorController controller;
+
 
 }
