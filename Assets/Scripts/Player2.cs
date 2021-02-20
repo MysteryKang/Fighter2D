@@ -122,7 +122,7 @@ public class Player2 : MonoBehaviour
         hdk.GetComponent<SpriteRenderer>().sortingLayerName = "Hadoken";
         hdk.GetComponent<Hadoken>().hitEffect = hitEffect;
         canSpawnHadoken = false;
-    }
+    } 
 
     
     public void Jumping() {

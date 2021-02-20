@@ -27,7 +27,8 @@ public class Hadoken : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 10 && collision.gameObject.name != self) {
+        if (collision.gameObject.layer == 10 && collision.gameObject.name != self)
+        {
             collision.gameObject.GetComponent<HealthSystem>().TakeHits(hadokenDamage);
             ShowHitEffect(collision.transform);
             collision.gameObject.GetComponent<Animator>().Play("TakeHit2", -1, 0);
@@ -38,7 +39,7 @@ public class Hadoken : MonoBehaviour
             Player.canSpawnHadoken = true;
             Destroy(this.gameObject);
         }
-     
+
         if (collision.transform.parent.name == "Player" && collision.gameObject.name != self) {
             Transform parent = collision.transform.parent;
             ShowHitEffect(parent);

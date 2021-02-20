@@ -95,7 +95,6 @@ public class TestScript : MonoBehaviour
                     // Debug.Log(lastInput.type);
                     // lastInput = null;
                 }
-                Debug.Log("times up");
                 ResetCombos();
             }
         }
